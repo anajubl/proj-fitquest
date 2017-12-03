@@ -5,8 +5,7 @@
     class UsuarioModel implements Serializablee, Nameable{
         private $id, $nome, $email, $senha,$nivel,$foco,$genero;
         
-        public function __construct($nome, $email, $senha,$nivel,$foco,$genero){
-           
+        public function __construct( $nome, $email, $senha,$nivel,$foco,$genero){
             $this->nome = $nome;
             $this->email = $email;
             $this->senha = $senha;
@@ -15,7 +14,7 @@
             $this->genero = $genero;
         }
         
-        
+       
         public function getNome(){
             return $this->nome;
         }
@@ -45,7 +44,7 @@
         //@Override
         public function toArray(){
             $aux = array();
-            
+           
             $aux["nm_usuario"] = $this->nome;
             $aux["nm_email_usuario"] = $this->email;
             $aux["nm_senha_usuario"] = $this->senha;
@@ -60,11 +59,6 @@
             return "usuario";
         }
         
-        public function isAdmin(){
-            if($this->email == "root@root.com" && $this->senha == "root")
-                return true;
-            else 
-                return false;
-        }
+        
     }
 ?>

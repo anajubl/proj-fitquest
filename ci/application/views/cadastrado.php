@@ -193,7 +193,10 @@
 				</div><!-- /row -->
 				<div class="row mt centered">
 					<div class="col-lg-6">
-						<p> <?php echo $msg;?></p>
+						<div class="alert alert-success">
+  							<strong><?php echo $msg;?></strong> 
+						</div>
+						
 						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastro" method="post">
 				  			<div class="form-group">
 				   				Nome &nbsp
