@@ -1,0 +1,10 @@
+              List of relations
+ Schema |   Name    | Type  |     Owner      
+--------+-----------+-------+----------------
+ public | atividade | table | nbfsnslgeyyxqt
+ public | exercicio | table | nbfsnslgeyyxqt
+ public | foco      | table | nbfsnslgeyyxqt
+ public | nivel     | table | nbfsnslgeyyxqt
+ public | usuario   | table | nbfsnslgeyyxqt
+(5 rows)
+
