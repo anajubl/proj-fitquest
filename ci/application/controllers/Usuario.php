@@ -11,11 +11,7 @@ class Usuario extends CI_Controller {
 			redirect('/login/form','refresh');
 		}
 	}
-	public function cadastrado(){
-		
-		
-	}
-	
+
 	public function cadastro(){
 		$nome = $this->input->post("nome");
 		$email = $this->input->post("email");
@@ -23,13 +19,13 @@ class Usuario extends CI_Controller {
 		$genero = $this->input->post("genero");
 		$foco = $this->input->post("foco");
 		require_once APPPATH."models/usuario.php";
-		$usr = new UsuarioModel(0,$nome, $email, $senha,1,$foco,$genero);
+		$usr = new UsuarioModel($nome, $email, $senha,1,$foco,$genero);
 		//NAO HA CONSTRUTOR NOS DAO'S
 		$this->load->model('insertdao');
 		$insdao = $this->insertdao;
 		$insdao->insert($usr);
 		$this->session->set_userdata("msg","Usuário Cadastrado");
-		redirect('/home','refresh');
+		redirect('/home/form','refresh');
 		//$this->load->view("home");
 	}
 	
