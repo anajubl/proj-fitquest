@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 	
-
 		<div id="headerwrap">
 			<div class="container">
 				<div class="row">
@@ -10,19 +9,11 @@
 							<br>no FitQuest <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<!-- AREA DE LOGIN -->
-<<<<<<< HEAD
 						<form class="form-inline" action="/ci/index.php/login/auth" method="post" role="form">
 					  		<div class="form-group">
 					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail" name="email">
 					    		<br>
 					    		<input type="password" class="form-control" placeholder="Digite sua senha" name="senha">
-=======
-						<form class="form-inline" role="form">
-					  		<div class="form-group">
-					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
-					    		<br>
-					    		<input type="password" class="form-control" placeholder="Digite sua senha">
->>>>>>> 44d0a2157afb3ade268e57baaaea7bc27c2e1d9b
 					    		<br>
 					  		</div>
 					  		<button type="submit" class="btn btn-warning btn-lg">Login</button>
@@ -74,11 +65,7 @@
 			<hr>
 			<div class="row centered">
 				<div class="col-lg-6 col-lg-offset-3">
-<<<<<<< HEAD
 					<form class="form-inline" action="" role="form">
-=======
-					<form class="form-inline" role="form">
->>>>>>> 44d0a2157afb3ade268e57baaaea7bc27c2e1d9b
 				  		<div class="form-group">
 				    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
 				  		</div>
