@@ -24,7 +24,7 @@ class Usuario extends CI_Controller {
 		$this->load->model('insertdao');
 		$insdao = $this->insertdao;
 		$insdao->insert($usr);
-		$this->session->set_userdata("msg","Usuário Cadastrado");
+		$this->session->set_userdata("msg","Usuário Cadastrado com sucesso");
 		redirect('/home/form','refresh');
 		//$this->load->view("home");
 	}

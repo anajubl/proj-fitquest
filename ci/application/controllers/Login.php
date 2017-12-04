@@ -9,7 +9,7 @@ class Login extends CI_Controller {
 	
 	public function sair(){
 		$this->session->unset_userdata("usuario");
-		redirect('/login/form','refresh');
+		redirect('/home/form','refresh');
 	}
 	
 	public function auth(){

@@ -6,8 +6,8 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <meta name="description" content="">
 	    <meta name="author" content="">
-	    <link rel="shortcut icon" href="assets/img/favicon.png">
-	
+		<link rel="stylesheet" href="<?= base_url('assets/img/favicon.png') ?>">
+	    
 	    <title>FitQuest</title>
 	
 	    <!-- Bootstrap core CSS -->
@@ -59,11 +59,11 @@
 							<br>no FitQuest <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<!-- AREA DE LOGIN -->
-						<form class="form-inline" role="form">
+						<form class="form-inline" role="form" action="/ci/index.php/login/auth" method="post">
 					  		<div class="form-group">
-					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
+					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail" name="email">
 					    		<br>
-					    		<input type="password" class="form-control" placeholder="Digite sua senha">
+					    		<input type="password" class="form-control" placeholder="Digite sua senha" name="senha">
 					    		<br>
 					  		</div>
 					  		<button type="submit" class="btn btn-warning btn-lg">Login</button>
@@ -73,7 +73,7 @@
 					</div><!-- /col-lg-6 -->
 					<div class="col-lg-6">
 						<!-- ADICIONAR WRAPER PARA SLIDES AQUI -->
-						<img class="img-responsive" src="assets/img/fq1.png" alt="">
+						<img class="img-responsive" src="<?= base_url('assets/img/fq1.png') ?>" alt="">
 					</div><!-- /col-lg-6 -->
 				</div><!-- /row -->
 			</div><!-- /container -->
@@ -90,20 +90,20 @@
 		
 			<div class="row mt centered">
 				<div class="col-lg-4">
-					<img src="assets/img/ser01.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser01.png') ?>" width="180" alt="">
 					<h4>1 - Crie seu avatar</h4>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
 				</div><!--/col-lg-4 -->
 
 				<div class="col-lg-4">
-					<img src="assets/img/ser03.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser03.png') ?>" width="180" alt="">
 					<h4>2 - Adicione suas tarefas</h4>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
 
 				</div><!--/col-lg-4 -->
 
 				<div class="col-lg-4">
-					<img src="assets/img/ser02.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser02.png') ?>" width="180" alt="">
 					<h4>3 - Ganhe pontos ao cumprir as tarefas e troque por recompensas</h4>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
 				</div><!--/col-lg-4 -->
@@ -150,13 +150,13 @@
 				  		<!-- Wrapper for slides -->
 				  		<div class="carousel-inner">
 				    		<div class="item active">
-				      			<img src="assets/img/p01.png" alt="">
+				      			<img src="<?= base_url('assets/img/p01.png') ?>" alt="">
 				    		</div>
 				    		<div class="item">
-				      			<img src="assets/img/p02.png" alt="">
+				      			<img src="<?= base_url('assets/img/p02.png') ?>" alt="">
 				    		</div>
 				    		<div class="item">
-				      			<img src="assets/img/p03.png" alt="">
+				      			<img src="<?= base_url('assets/img/p03.png') ?>" alt="">
 				    		</div>
 						</div>			
 					</div><!-- /col-lg-8 -->

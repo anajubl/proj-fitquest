@@ -15,7 +15,7 @@ class Home extends CI_Controller {
 
 	
 	
-	//MOSTRAR A MENSAGEM DE CADASTRADO
+	//MOSTRAR MSG CADASTRADO
 	public function form(){
 		$data = array();
 		$data["msg"] = $this->session->userdata("msg");
