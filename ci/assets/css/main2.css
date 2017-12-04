@@ -1,0 +1,15 @@
+#foto-user{
+    width:200px;
+    height:200px;
+    border-radius:100px;
+}
+
+li{
+    font-size:20px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.dados{
+    font-weight: normal;
+}
