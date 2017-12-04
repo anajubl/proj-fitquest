@@ -20,7 +20,16 @@ class Login extends CI_Controller {
 		$usrdao = $this->usuariodao;
 		$usuario = $usrdao->getUser($email,$senha);
 		if(isset($usuario)){
-			$this->session->set_userdata("usuario",$usuario->getNome());
+			$user = [
+				"nome" => $usuario->getNome(),
+				"foco" => $usuario->getFocoNM(),
+				"nivel" => $usuario->getNivelNM()
+			];
+
+			$this->session->set_userdata("usuario",$user);
+			
+			
+			
 			redirect('/usuario/dashboard','refresh');			
 		}else{
 	

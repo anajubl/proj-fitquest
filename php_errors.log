@@ -220,3 +220,9 @@
 [04-Dec-2017 14:17:39 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
 [04-Dec-2017 14:17:39 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [04-Dec-2017 14:17:39 UTC] PHP   4. Login->auth() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[04-Dec-2017 22:21:12 UTC] PHP Fatal error:  Call to undefined method UsuarioModel::getfoconome() in /home/ubuntu/workspace/ci/application/controllers/Login.php on line 24
+[04-Dec-2017 22:21:12 UTC] PHP Stack trace:
+[04-Dec-2017 22:21:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[04-Dec-2017 22:21:12 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[04-Dec-2017 22:21:12 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[04-Dec-2017 22:21:12 UTC] PHP   4. Login->auth() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532

@@ -5,7 +5,9 @@ class Usuario extends CI_Controller {
 	
 	public function dashboard(){
 		if($this->session->userdata("usuario")){
-			$data["nome"] = $this->session->userdata("usuario");
+			$data["nome"] = $this->session->userdata("usuario")["nome"];
+			$data["foco"] = $this->session->userdata("usuario")["foco"];
+			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
 			$this->load->view("painel",$data);
 		}else{
 			redirect('/login/form','refresh');
@@ -19,7 +21,7 @@ class Usuario extends CI_Controller {
 		$genero = $this->input->post("genero");
 		$foco = $this->input->post("foco");
 		require_once APPPATH."models/usuario.php";
-		$usr = new UsuarioModel($nome, $email, $senha,1,$foco,$genero);
+		$usr = new UsuarioModel($nome, $email, $senha,1,null,$foco,null,$genero);
 		//NAO HA CONSTRUTOR NOS DAO'S
 		$this->load->model('insertdao');
 		$insdao = $this->insertdao;
