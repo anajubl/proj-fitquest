@@ -185,6 +185,7 @@
 [02-Dec-2017 21:35:55 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
 [02-Dec-2017 21:35:55 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [02-Dec-2017 21:35:55 UTC] PHP   4. Usuario->cadastro() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+<<<<<<< HEAD
 [03-Dec-2017 16:08:42 UTC] PHP Fatal error:  Call to undefined function redirect() in /home/ubuntu/workspace/ci/application/controllers/Usuario.php on line 28
 [03-Dec-2017 16:08:42 UTC] PHP Stack trace:
 [03-Dec-2017 16:08:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
@@ -207,3 +208,5 @@
 [03-Dec-2017 18:35:40 UTC] PHP Stack trace:
 [03-Dec-2017 18:35:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
 [03-Dec-2017 18:35:40 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+=======
+>>>>>>> 44d0a2157afb3ade268e57baaaea7bc27c2e1d9b
