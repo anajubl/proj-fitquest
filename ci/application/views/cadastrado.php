@@ -1,5 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	    <link rel="shortcut icon" href="assets/img/favicon.png">
+	
+	    <title>FitQuest</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.css') ?>">
+	    
+	    <!-- Custom styles for this template -->
+	    <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
+	     
+	    <!-- Fonts from Google Fonts -->
+		<link rel="stylesheet" href="<?= base_url('http://fonts.googleapis.com/css?family=Lato:300,400,900') ?>">
+
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+	    <!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top">
+	      	<div class="container">
+	        	<div class="navbar-header">
+	          		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            		<span class="icon-bar"></span> 
+	            		<span class="icon-bar"></span>
+	            		<span class="icon-bar"></span>
+	          		</button>
+	          		<a class="navbar-brand" href="#headerwrap"><b>FitQuest</b></a>
+	        	</div>
+	        	<div class="navbar-collapse collapse">
+	          		<ul class="nav navbar-nav navbar-right">
+	            		<li><a href="#explic">Como Funciona</a></li>
+	            		<li><a href="#sobre">Quem Somos</a></li>
+						<li><a href="#contato">Contato</a></li>
+						<li><a style="font-weight: bold" href="#cadastro">Cadastre-se</a></li>
+	          		</ul>
+	        	</div><!--/.nav-collapse -->
+	      	</div>
+	    </div>
+		<!----FIM DO HEADER PADRAO-->
+
 	
 
 		<div id="headerwrap">
@@ -10,11 +59,11 @@
 							<br>no FitQuest <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<!-- AREA DE LOGIN -->
-						<form class="form-inline" action="/ci/index.php/login/auth" method="post" role="form">
+						<form class="form-inline" role="form">
 					  		<div class="form-group">
-					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail" name="email">
+					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
 					    		<br>
-					    		<input type="password" class="form-control" placeholder="Digite sua senha" name="senha">
+					    		<input type="password" class="form-control" placeholder="Digite sua senha">
 					    		<br>
 					  		</div>
 					  		<button type="submit" class="btn btn-warning btn-lg">Login</button>
@@ -66,7 +115,7 @@
 			<hr>
 			<div class="row centered">
 				<div class="col-lg-6 col-lg-offset-3">
-					<form class="form-inline" action="" role="form">
+					<form class="form-inline" role="form">
 				  		<div class="form-group">
 				    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
 				  		</div>
@@ -144,7 +193,7 @@
 				</div><!-- /row -->
 				<div class="row mt centered">
 					<div class="col-lg-6">
-						
+						<p> <?php echo $msg;?></p>
 						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastro" method="post">
 				  			<div class="form-group">
 				   				Nome &nbsp
@@ -221,6 +270,18 @@
 						<br>
 					</form>
 				</div>
-			
+					<!----FOOTER PADRAO---->
+				<div class="col-lg-3"></div>
+			</div><!-- /row -->
+			<hr>
+			<p class="centered">Created by BlackTie.co & Edited by BrodsHackers - Attribution License 3.0 - 2017</p>
+		</div><!-- /container -->
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+	</body>
+</html>
 	</body>
 </html>

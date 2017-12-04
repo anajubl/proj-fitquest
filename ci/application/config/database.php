@@ -75,11 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
-	'dbdriver' => 'mysqli',
+	'hostname' => 'ec2-54-225-70-53.compute-1.amazonaws.com',
+	'username' => 'nbfsnslgeyyxqt',
+	'password' => '6d4b95115d9f6a36d573c9ba48361a007d9253160c369511322199b48eefd5ad',
+	'database' => 'd3ab02i9gdol6t',
+	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -94,3 +94,14 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+/*ATUALIZAR DADOS:
+
+Port
+5432
+
+URI
+postgres://nbfsnslgeyyxqt:6d4b95115d9f6a36d573c9ba48361a007d9253160c369511322199b48eefd5ad@ec2-54-225-70-53.compute-1.amazonaws.com:5432/d3ab02i9gdol6t
+Heroku CLI
+heroku pg:psql postgresql-lively-98483 --app meu-bd
+*/

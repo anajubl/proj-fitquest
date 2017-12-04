@@ -1,0 +1,7 @@
+ cd_nivel | nm_nivel 
+----------+----------
+        1 | Fácil
+        2 | Médio
+        3 | Dificil
+(3 rows)
+
