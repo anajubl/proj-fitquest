@@ -23,11 +23,11 @@ class Login extends CI_Controller {
 			$user = [
 				"nome" => $usuario->getNome(),
 				"foco" => $usuario->getFocoNM(),
-				"nivel" => $usuario->getNivelNM()
+				"nivel" => $usuario->getNivelNM(),
+				"cd_foco" => $usuario->getFoco(),
+				"cd_nivel" => $usuario->getNivel(),
 			];
-
 			$this->session->set_userdata("usuario",$user);
-			
 			
 			
 			redirect('/usuario/dashboard','refresh');			

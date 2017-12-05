@@ -8,6 +8,11 @@ class Usuario extends CI_Controller {
 			$data["nome"] = $this->session->userdata("usuario")["nome"];
 			$data["foco"] = $this->session->userdata("usuario")["foco"];
 			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
+			$data["cd_foco"] = $this->session->userdata("usuario")["cd_foco"];
+			$data["cd_nivel"] = $this->session->userdata("usuario")["cd_nivel"];
+			//$data["alooo"] = ["mano", "tem", "muita", "coisa", "aki"];
+			$this->load->model('atividadedao');
+			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
 			$this->load->view("painel",$data);
 		}else{
 			redirect('/login/form','refresh');

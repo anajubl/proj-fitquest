@@ -22,8 +22,7 @@
 		        $focoUsu = $usuario->cd_foco;
 		        $focoUsuNM = $usuario->nm_foco;
 		        $generoUsu = $usuario->ic_sexo_masculino;
-		        print_r($usuario);
-		        
+
 		        return new UsuarioModel($nome,$emailUsu,$senhaUsu,$nivelUsu,$nivelUsuNM,$focoUsu,$focoUsuNM,$generoUsu);
             }else{
                 return null;
@@ -31,9 +30,5 @@
     
         }
 
-        
-        
-        
     }
-    
 ?>

@@ -29,7 +29,6 @@
 	    <link href="<?= base_url('assets/css/main2.css') ?>" rel='stylesheet' type='text/css'>
 	</head>
     <body>
-        
         <h1>BEM-VINDO <?= $nome ?> !!</h1>
     
     	<div class="container">
@@ -46,10 +45,10 @@
 	  		</div>
 	  		<div class="Atividades">
 	  			<table>
-	  			    <?php foreach($atividades as $atividade){ ?>
+	  			    <?php foreach($vetor as $atividade){ ?>
 	  				<tr>
 						<td>
-						    <?php $atividade->nome ?>
+						    <?php echo $atividade->getNomeativ() ?>
 						</td>
 						<td>
 						    <a href="ci/index.php/usuario/ver-atividade"> Excluir X </a>
