@@ -41,7 +41,7 @@
 	  			<a href="" id="sair" class="sair">Sair</a>
 	  		</div>
 	  		<div id="Atividade">
-	  			<h1 id="nome-atividade"></h1>
+	  			<h1 id="nome-atividade"><?php echo $atividade->getNomeativ() ?></h1>
 	  			<p id="ds_atividade"></p>
 	  			<form id="form-fiz">
 	  			Fiz?

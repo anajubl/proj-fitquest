@@ -23,6 +23,21 @@
             }
     
         }
+        
+        
+        public function check($id){
+           
+		  $this->db->where ('cd_atividade',$$id);
+		  $this->db->delete('atividade');
+		 
+		  redirect('usuario/dashboard/','refresh');
 
-    }
+		
+		
+		
+		       }
+            
+	}
+            
+      
 ?>

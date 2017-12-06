@@ -10,7 +10,7 @@ class Usuario extends CI_Controller {
 			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
 			$data["cd_foco"] = $this->session->userdata("usuario")["cd_foco"];
 			$data["cd_nivel"] = $this->session->userdata("usuario")["cd_nivel"];
-			//$data["alooo"] = ["mano", "tem", "muita", "coisa", "aki"];
+			
 			$this->load->model('atividadedao');
 			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
 			$this->load->view("painel",$data);
@@ -36,5 +36,50 @@ class Usuario extends CI_Controller {
 		//$this->load->view("home");
 	}
 	
+		public function form(){
+		$this->load->view("painel");
+	}
+	
+	public function sair(){
+		$this->session->unset_userdata("usuario");
+		redirect('/home/form','refresh');
+	}
+	
+	public function auth(){
+		$email = $this->input->post("email");
+		$senha = $this->input->post("senha");
+		require_once APPPATH."models/usuario.php";
+		$this->load->model('usuariodao');
+		$usrdao = $this->usuariodao;
+		$usuario = $usrdao->getUser($email,$senha);
+		if(isset($usuario)){
+			$user = [
+				"nome" => $usuario->getNome(),
+				"foco" => $usuario->getFocoNM(),
+				"nivel" => $usuario->getNivelNM(),
+				"cd_foco" => $usuario->getFoco(),
+				"cd_nivel" => $usuario->getNivel(),
+			];
+			$this->session->set_userdata("usuario",$user);
+			
+			
+			redirect('dashboard','refresh');			
+		}else{
+	
+		redirect('/home','refresh');
+		
+	}
 }
 
+		
+	
+			
+	
+	
+	
+	
+}
+	
+	
+	
+	

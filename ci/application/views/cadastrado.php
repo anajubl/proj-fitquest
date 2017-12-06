@@ -59,7 +59,7 @@
 							<br>no FitQuest <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<!-- AREA DE LOGIN -->
-						<form class="form-inline" role="form" action="/ci/index.php/login/auth" method="post">
+						<form class="form-inline" role="form" action="/ci/index.php/usuario/auth" method="post">
 					  		<div class="form-group">
 					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail" name="email">
 					    		<br>

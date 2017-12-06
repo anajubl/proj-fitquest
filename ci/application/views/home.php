@@ -9,7 +9,7 @@
 							<br>no FitQuest <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<!-- AREA DE LOGIN -->
-						<form class="form-inline" action="/ci/index.php/login/auth" method="post" role="form">
+						<form class="form-inline" action="/ci/index.php/usuario/auth" method="post" role="form">
 					  		<div class="form-group">
 					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail" name="email">
 					    		<br>
@@ -146,15 +146,15 @@
 						
 						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastro" method="post">
 				  			<div class="form-group">
-				   				Nome &nbsp
+				   				<span style="font-size: 20px">Nome &nbsp</span>
 				   				<input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome" required>
 				    			<br>
 				   				<br>
-				    			Email &nbsp
+				    			<span style="font-size: 20px">Email &nbsp</span>
 				    			<input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required>
 				    			<br>
 				    			<br>
-				    			Senha &nbsp
+				    			<span style="font-size: 20px">Senha &nbsp</span>
 				    			<input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha" required>
 				    			<br>
 				    			<br>					
@@ -190,7 +190,7 @@
 			</div>
 		</form><!---- FIM DA AREA DE CADASTRO ---->
 		
-		<!-- FORM DE CONTATO php.mailer -->
+		<!-- FORM DE CONTATO -->
 		<div class="container" id="contato">
 			<hr>
 			<div class="row centered">
@@ -220,6 +220,5 @@
 						<br>
 					</form>
 				</div>
-			
 	</body>
 </html>
