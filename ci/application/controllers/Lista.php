@@ -15,7 +15,7 @@ class Lista extends CI_Controller {
 			$this->load->model('atividadedao');
 			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
         
-        $this->load->view('headerp');
+        // $this->load->view('headerp');
         $this->load->view('table',$data);
 
 /* pegar func dashboard */

@@ -1,3 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.ico') ?>"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>FitQuest</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+     <!--Bootstrap core CSS     -->
+    <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet" />  
+
+     <!--Animation library for notifications   -->
+    <link href="<?= base_url('assets/css/animate.min.css') ?>" rel="stylesheet"/> 
+
+      <!--Light Bootstrap Table core CSS    -->
+    <link href="<?= base_url('assets/css/light-bootstrap-dashboard.css?v=1.4.0') ?>" rel="stylesheet"/> 
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="<?= base_url('assets/css/demo.css') ?>" rel="stylesheet" /> 
+
+
+    <!--     Fonts and icons     -->
+    <link href="<?= base_url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') ?>" rel="stylesheet"> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> 
+    <link href="<?= base_url('assets/css/pe-icon-7-stroke.css') ?>" rel="stylesheet" />
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="blue" data-image="<?= base_url('assets/img/sidebar-4.jpg') ?>"> 
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+        <!-- TROCAR LOGO -->
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text"><!--LINK PARA HOME-->
+                    FitQuest
+                </a>
+            </div>
+            <!--FIM DO HEADER FIXO-->
 
             <ul class="nav">
                 <li>
@@ -57,19 +103,19 @@
                 <div class="header">
                     <h4 class="title">Minhas Atividades</h4>
                     <p class="category">Atividades a realizar</p>
-                	<form action="ci/index.php/usuario/verAtividade" method="POST">
-		  		</div>
+                </div>
+                <form action="ci/index.php/usuario/verAtividade" method="POST">
                 <div class="content">
                     <div class="table-full-width">
                         <table class="table">
                             <tbody>
 		  			           <?php foreach($vetor as $atividade){ ?>
                                <tr>
-                                    <td> <?php echo $atividade->getNomeativ() ?>
-										<div class="checkbox">
-			  							  	<input id="checkbox1" type="checkbox">
-			  							  	<label for="checkbox1"></label>
-		  						  		</div>
+                                    <td> <?php echo $atividade->getNomeativ() ?></td>
+									<td>
+    		  						  	    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
+    							    	        <input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
+    					        		    </label>
                                     </td>   
                                 </tr>
                                 <?php } ?>
@@ -77,25 +123,16 @@
                         </table>
                     </div><!--TABLE-FULL-->
                 </div><!--CONTENT-->
-            </div><!--CARD-->
-        </div> <!--col-md-12 era md-6-->   
-
-		  		
-		  		
-		  		
-		  	
-	  		    
-                    
-                    
-                    
-                    
+                </form>
                 
+            </div><!--CARD-->
+        </div> <!--col-md-12 era md-6-->
 
 <div class="col-md-12">
             <div class="card ">
                 <div class="header">
                     <h4 class="title">Atividades Concluídas</h4><!-- MARCAR COMO disabled-->
-                    <p class="category">Backend development</p>
+                    <p class="category"></p>
                 </div>
                 <div class="content">
                     <div class="table-full-width">
@@ -103,7 +140,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-										<div class="checkbox">
+										<div class="checkbox"> <!-- ENVIA ATIV PARA TABELA ABAIXO OU MARCA ELA COMO CLASS DISABLED -->
 			  							  	<input id="checkbox1" type="checkbox">
 			  							  	<label for="checkbox1"></label>
 		  						  		</div>
@@ -118,92 +155,92 @@
                                         </button>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-										<div class="checkbox">
-			  							  	<input id="checkbox2" type="checkbox" checked>
-			  							  	<label for="checkbox2"></label>
-		  						  		</div>
-                                    </td>
-                                    <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-										<div class="checkbox">
-			  							  	<input id="checkbox3" type="checkbox">
-			  							  	<label for="checkbox3"></label>
-		  						  		</div>
-                                    </td>
-                                    <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
-									</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-										<div class="checkbox">
-			  							  	<input id="checkbox4" type="checkbox" checked>
-			  							  	<label for="checkbox4"></label>
-		  						  		</div>
-                                    </td>
-                                    <td>Create 4 Invisible User Experiences you Never Knew About</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-										<div class="checkbox">
-			  							  	<input id="checkbox5" type="checkbox">
-			  							  	<label for="checkbox5"></label>
-		  						  		</div>
-                                    </td>
-                                    <td>Read "Following makes Medium better"</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-										<div class="checkbox">
-			  							  	<input id="checkbox6" type="checkbox" checked>
-			  							  	<label for="checkbox6"></label>
-		  						  		</div>
-                                    </td>
-                                    <td>Unfollow 5 enemies from twitter</td>
-                                    <td class="td-actions text-right">
-                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                            <i class="fa fa-edit"></i>
-                                        </button>
-                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                            <i class="fa fa-times"></i>
-                                        </button>
-                                    </td>
-                                </tr>
+         <!--                       <tr>-->
+         <!--                           <td>-->
+									<!--	<div class="checkbox">-->
+			  				<!--			  	<input id="checkbox2" type="checkbox" checked>-->
+			  				<!--			  	<label for="checkbox2"></label>-->
+		  					<!--	  		</div>-->
+         <!--                           </td>-->
+         <!--                           <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>-->
+         <!--                           <td class="td-actions text-right">-->
+         <!--                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-edit"></i>-->
+         <!--                               </button>-->
+         <!--                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-times"></i>-->
+         <!--                               </button>-->
+         <!--                           </td>-->
+         <!--                       </tr>-->
+         <!--                       <tr>-->
+         <!--                           <td>-->
+									<!--	<div class="checkbox">-->
+			  				<!--			  	<input id="checkbox3" type="checkbox">-->
+			  				<!--			  	<label for="checkbox3"></label>-->
+		  					<!--	  		</div>-->
+         <!--                           </td>-->
+         <!--                           <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit-->
+									<!--</td>-->
+         <!--                           <td class="td-actions text-right">-->
+         <!--                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-edit"></i>-->
+         <!--                               </button>-->
+         <!--                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-times"></i>-->
+         <!--                               </button>-->
+         <!--                           </td>-->
+         <!--                       </tr>-->
+         <!--                       <tr>-->
+         <!--                           <td>-->
+									<!--	<div class="checkbox">-->
+			  				<!--			  	<input id="checkbox4" type="checkbox" checked>-->
+			  				<!--			  	<label for="checkbox4"></label>-->
+		  					<!--	  		</div>-->
+         <!--                           </td>-->
+         <!--                           <td>Create 4 Invisible User Experiences you Never Knew About</td>-->
+         <!--                           <td class="td-actions text-right">-->
+         <!--                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-edit"></i>-->
+         <!--                               </button>-->
+         <!--                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-times"></i>-->
+         <!--                               </button>-->
+         <!--                           </td>-->
+         <!--                       </tr>-->
+         <!--                       <tr>-->
+         <!--                           <td>-->
+									<!--	<div class="checkbox">-->
+			  				<!--			  	<input id="checkbox5" type="checkbox">-->
+			  				<!--			  	<label for="checkbox5"></label>-->
+		  					<!--	  		</div>-->
+         <!--                           </td>-->
+         <!--                           <td>Read "Following makes Medium better"</td>-->
+         <!--                           <td class="td-actions text-right">-->
+         <!--                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-edit"></i>-->
+         <!--                               </button>-->
+         <!--                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-times"></i>-->
+         <!--                               </button>-->
+         <!--                           </td>-->
+         <!--                       </tr>-->
+         <!--                       <tr>-->
+         <!--                           <td>-->
+									<!--	<div class="checkbox">-->
+			  				<!--			  	<input id="checkbox6" type="checkbox" checked>-->
+			  				<!--			  	<label for="checkbox6"></label>-->
+		  					<!--	  		</div>-->
+         <!--                           </td>-->
+         <!--                           <td>Unfollow 5 enemies from twitter</td>-->
+         <!--                           <td class="td-actions text-right">-->
+         <!--                               <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-edit"></i>-->
+         <!--                               </button>-->
+         <!--                               <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">-->
+         <!--                                   <i class="fa fa-times"></i>-->
+         <!--                               </button>-->
+         <!--                           </td>-->
+         <!--                       </tr>-->
                             </tbody>
                         </table>
                     </div><!--TABLE-FULL-->
@@ -211,9 +248,7 @@
             </div><!--CARD-->
         </div> <!--col-md-12 era md-6-->   
 
-
-
-
+    
         <!-- LISTA 1 
         <div class="content">
             <div class="container-fluid">
@@ -351,11 +386,48 @@
                     </div>
                     -->
 
+        <!--        </div>-->
+        <!--    </div>-->
+        </div> <!-- MAIN PAINEL -->
+        </div> <!--WRAPPER-->
+        
+        
+        <!-- MODAL -->
+	  			<div id="exampleModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><!--modal check atividade-->
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+							<form>
+                            	<div class="modal-header">
+                                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                	<h4 class="modal-title" id="exampleModalLabel">Confirmação de Atividade Realizada</h4>
+                            	</div>
+                            	<div class="modal-body">
+                            		<h2 id="titulo"></h2>
+                            		
+                            		<p id="ds"></p>
+                            		
+	                                <p>Você já realizou essa atividade?</p>
+		                            <label>    
+		                                <input type="radio" id="sim" name="fez" value="sim" checked>Sim</input>
+		                            </label>
+		                            <label>
+		                                <input type="radio" id="nao" name="fez" value="não">Não</input>
+	                                </label>
+	                                <label>
+		                                <p class="text-warning"><small>Como foi?</small></p>
+		                                <input type="textarea" name="descricao" id="descricao"/></input>
+	                            	</label>
+	                            </div>
+	                            <div class="modal-footer">
+	                                <button type="button" class="btn btn-default" data-dismiss="modal" id="enviar_ok">Ok</button>	
+	                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            	</div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- FIM modal check atividade-->
 
-                </div>
-            </div>
-        </div>
-
+    
   <!--INICIO DO FOOTER-->
         <footer class="footer">
             <div class="container-fluid">
@@ -367,29 +439,87 @@
             </div>
         </footer>
 
-    </div><!-- INICIO DA DIV??-->
-</div><!-- INICIO DA DIV??-->
+<!--    </div><!-- INICIO DA DIV??-->
+<!--</div><!-- INICIO DA DIV??-->
 
 
 </body>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--<script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>-->
+	
+	<!--<script src="assets/js/bootstrap.min.js"></script> -->
 
 	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
+	<!--<script src="assets/js/chartist.min.js"></script>-->
 
     <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    <!--<script src="assets/js/bootstrap-notify.js"></script>-->
 
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+	<!--<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>-->
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
+	<!--<script src="assets/js/demo.js"></script>-->
+	
+	
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> 
+    	<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>     	
+	
+	<script type="text/javascript">
+		
+		var atividades = [];
+		
+		$(".botao").click(function(){
+	    	var id = $(this)[0].id;
+		    const xhr = new XMLHttpRequest();
+		    xhr.open("POST", "verAtividade");
+		    xhr.onreadystatechange = function() {
+		        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+		            var resp = JSON.parse(xhr.responseText);
+		            atividades[0]=resp;
+		        	document.getElementById("ds").innerHTML=resp.ds;
+		            document.getElementById("titulo").innerHTML=resp.nome;
+		        }
+		    }
+		    var fd = new FormData();
+		    fd.append('id', id);
+		    xhr.send(fd);
+		});
+		
+		$("#enviar_ok").click(function(){
+			
+			var cd_usuario = ;
+			var cd_atividade = atividades[0].id;
+			var ds_exercicio = ;
+			var qt_series = ;
+			var qt_repeticoes = ;
+			var ic_feito = ;
+			
+			alert(cd_atividade);
+			
+		    const xhr = new XMLHttpRequest();
+		    xhr.open("POST", "verAtividade");
+		    xhr.onreadystatechange = function() {
+		        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+		            var resp = JSON.parse(xhr.responseText);
+		            
+		        	document.getElementById("ds").innerHTML=resp.ds;
+		            document.getElementById("titulo").innerHTML=resp.nome;
+		        }
+		    }
+		    var fd = new FormData();
+		    fd.append('id', id);
+		    xhr.send(fd);
+		});
+		
+    	$('#exampleModal').on('show.bs.modal', function (event) {
+          var label = $(event.relatedTarget) 
+          var recipient = label.data('whatever')
+          var modal = $(this)
+          modal.find('.modal-title').text('Confirmação de ' + recipient)
+        });
+
+    </script>
 
 </html>
