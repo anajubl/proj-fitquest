@@ -5,7 +5,7 @@
     class UsuarioModel implements Serializablee, Nameable{
         private $nome, $email, $senha,$nivel,$nivelNM,$foco,$focoNM,$genero;
         
-        public function __construct($nome, $email, $senha,$nivel,$nivelNM,$foco,$focoNM,$genero){
+        public function __construct( $nome, $email, $senha,$nivel,$nivelNM,$foco,$focoNM,$genero){
            
             $this->nome = $nome;
             $this->email = $email;

@@ -30,7 +30,7 @@
 	</head>
     <body>
         <div class="row mt centered">
-            <h1>BEM-VINDO <?= $nome ?> !!</h1> 
+            <h1>BEM-VINDO <?= ucwords($nome) ?> !!</h1> 
             <br>
             <!-- <button  type="button" class="btn btn-outline-info"><a href="/ci/index.php/login/sair">Logout</a></button>-->
             <br>
@@ -41,9 +41,9 @@
 	  			</div><!--img-->
 	  			<br>
 	  			
-	  				<p style="font-weight: bold">Nome: <span style="font-weight: normal" class="dados"><?= $nome ?></span></p>
-					<p style="font-weight: bold">Foco: <span style="font-weight: normal" class="dados"><?= $foco ?></span></p>
-					<p style="font-weight: bold">Nível: <span style="font-weight: normal" class="dados"><?= $nivel ?></span></p>
+	  				<p style="font-weight: bold">Nome: <span style="font-weight: normal" class="dados"><?= ucwords($nome) ?></span></p>
+					<p style="font-weight: bold">Foco: <span style="font-weight: normal" class="dados"><?= ucwords($foco) ?></span></p>
+					<p style="font-weight: bold">Nível: <span style="font-weight: normal" class="dados"><?= ucwords($nivel) ?></span></p>
 	  		    <br>
 	  		    <button  type="button" class="btn btn-outline-info"><a href="/ci/index.php/usuario/sair">Logout</a></button>
                 <br>
@@ -62,8 +62,9 @@
 							    <?php echo $atividade->getNomeativ() ?>
 							</td>
 							<td>
-							    
-							    <label class="checkbox-inline"  ><input type="checkbox" id="<?php echo $atividade->getCdativ()?>" name="check" value="<?php echo $atividade->getCdativ()?>"></label>
+							    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
+							    	<input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
+							    </label>
 							</td>
 							<td>
 		
@@ -76,43 +77,97 @@
 	  			<div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><!--modal check atividade-->
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h4 class="modal-title" id="exampleModalLabel">Confirmação de Atividade Realizada</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Tem certeza que deseja marcar essa atividade como feita?</p>
-                                <p class="text-warning"><small>Se você marcá-la como realizada, ela será excluída da sua lista de atividades.</small></p>
-                            </div>
-                            <div class="modal-footer">
-                                
-                                <button type="button" class="btn btn-default" data-dismiss="modal" >OK!</button><!-- DELETA ATIVIDADE-->
-                                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                            </div>
+							<form>
+                            	<div class="modal-header">
+                                	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                	<h4 class="modal-title" id="exampleModalLabel">Confirmação de Atividade Realizada</h4>
+                            	</div>
+                            	<div class="modal-body">
+                            		<h2 id="titulo"></h2>
+                            		
+                            		<p id="ds"></p>
+                            		
+	                                <p>Você já realizou essa atividade?</p>
+		                            <label>    
+		                                <input type="radio" id="sim" name="fez" value="sim" checked>Sim</input>
+		                            </label>
+		                            <label>
+		                                <input type="radio" id="nao" name="fez" value="não">Não</input>
+	                                </label>
+	                                <label>
+		                                <p class="text-warning"><small>Como foi?</small></p>
+		                                <input type="textarea" name="descricao" id="descricao"/></input>
+	                            	</label>
+	                            </div>
+	                            <div class="modal-footer">
+	                                <button type="button" class="btn btn-default" data-dismiss="modal" id="enviar_ok">Ok</button>	
+	                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+
+                            	</div>
+                            </form>
                         </div>
+                        
                     </div>
                 </div><!-- FIM modal check atividade-->
 	  			
 	  		</div><!--col-lg-6 atividades-->
 	  	</div><!--row-->
-
+	
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> 
     	<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script> 
     	
     	<script type="text/javascript">
-        /*
-        $(document).ready(function(){
-        		$("#myModal").modal('show');
-        	});
-       */ 	
+    		
+    		var atividades = [];
+    		
+    		$(".botao").click(function(){
+		    	var id = $(this)[0].id;
+			    const xhr = new XMLHttpRequest();
+			    xhr.open("POST", "verAtividade");
+			    xhr.onreadystatechange = function() {
+			        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+			            var resp = JSON.parse(xhr.responseText);
+			            atividades[0]=resp;
+			        	document.getElementById("ds").innerHTML=resp.ds;
+			            document.getElementById("titulo").innerHTML=resp.nome;
+			        }
+			    }
+			    var fd = new FormData();
+			    fd.append('id', id);
+			    xhr.send(fd);
+    		});
+    		
+    		$("#enviar_ok").click(function(){
+    			
+    			var cd_usuario = ;
+    			var cd_atividade = atividades[0].id;
+    			var ds_exercicio = ;
+    			var qt_series = ;
+    			var qt_repeticoes = ;
+    			var ic_feito = ;
+    			
+    			alert(cd_atividade);
+    			
+			    const xhr = new XMLHttpRequest();
+			    xhr.open("POST", "verAtividade");
+			    xhr.onreadystatechange = function() {
+			        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+			            var resp = JSON.parse(xhr.responseText);
+			            
+			        	document.getElementById("ds").innerHTML=resp.ds;
+			            document.getElementById("titulo").innerHTML=resp.nome;
+			        }
+			    }
+			    var fd = new FormData();
+			    fd.append('id', id);
+			    xhr.send(fd);
+    		});
+    		
         	$('#exampleModal').on('show.bs.modal', function (event) {
-              var label = $(event.relatedTarget) // Button that triggered the modal
-              var recipient = label.data('whatever') // Extract info from data-* attributes
-              // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-              // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+              var label = $(event.relatedTarget) 
+              var recipient = label.data('whatever')
               var modal = $(this)
               modal.find('.modal-title').text('Confirmação de ' + recipient)
-              modal.find('.modal-body input').val(recipient)
             });
 
         	

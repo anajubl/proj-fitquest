@@ -5,6 +5,7 @@ class Usuario extends CI_Controller {
 	
 	public function dashboard(){
 		if($this->session->userdata("usuario")){
+			$data["id"] = $this->session->userdata("usuario")["id"];
 			$data["nome"] = $this->session->userdata("usuario")["nome"];
 			$data["foco"] = $this->session->userdata("usuario")["foco"];
 			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
@@ -36,9 +37,7 @@ class Usuario extends CI_Controller {
 		//$this->load->view("home");
 	}
 	
-		public function form(){
-		$this->load->view("painel");
-	}
+	
 	
 	public function sair(){
 		$this->session->unset_userdata("usuario");
@@ -58,27 +57,40 @@ class Usuario extends CI_Controller {
 				"foco" => $usuario->getFocoNM(),
 				"nivel" => $usuario->getNivelNM(),
 				"cd_foco" => $usuario->getFoco(),
-				"cd_nivel" => $usuario->getNivel(),
+				"cd_nivel" => $usuario->getNivel()
 			];
 			$this->session->set_userdata("usuario",$user);
 			
 			
-			redirect('dashboard','refresh');			
+			redirect('usuario/dashboard','refresh');			
 		}else{
 	
 		redirect('/home','refresh');
-		
+		}
+	}
+	
+	public function verAtividade(){
+		$id = $_POST["id"];
+		require_once APPPATH."models/atividade.php";
+		$this->load->model('atividadedao');
+		$atividao = $this->atividadedao;
+		$atividade = $atividao->getAtivID($id);
+		if(isset($atividade)){
+			$ativi = array(				
+				"id" => $atividade->getCdativ(),
+				"nome" => $atividade->getNomeativ(),
+				"ds" => $atividade->getDsativ(),
+				"foco" => ucwords($atividade->getCdnivel()),
+				"nivel" => ucwords($atividade->getCdfoco())
+			);
+			echo json_encode($ativi);
+			$this->session->set_userdata("atividade",$ativi);
+		}else{
+			echo "Não houve retorno do banco para $id";	
+		}
 	}
 }
 
-		
-	
-			
-	
-	
-	
-	
-}
 	
 	
 	
