@@ -70,8 +70,7 @@
 			  							  	<input id="checkbox1" type="checkbox">
 			  							  	<label for="checkbox1"></label>
 		  						  		</div>
-                                    </td>
-                                        
+                                    </td>   
                                 </tr>
                                 <?php } ?>
                             </tbody>
@@ -84,25 +83,7 @@
 		  		
 		  		
 		  		
-		  			    
-		  			    <?php foreach($vetor as $atividade){ ?>
-		  				<tr class="list-group">
-							<td class="list-group-item">
-							    <?php echo $atividade->getNomeativ() ?>
-							</td>
-							<td>
-							    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
-							    	<input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
-							    </label>
-							</td>
-							<td>
-		
-							</td>
-		  				</tr>
-		  				<?php } ?>
-		  			</table>
-		  		</form>
-	  			
+		  	
 	  		    
                     
                     
