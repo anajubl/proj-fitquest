@@ -49,7 +49,8 @@ class Usuario extends CI_Controller {
 		redirect('/home','refresh');
 		}
 	}
-}
+
+
 	
 	public function verAtividade(){
 		$id = $_POST["id"];
