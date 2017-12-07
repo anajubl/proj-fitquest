@@ -144,7 +144,7 @@
 				<div class="row mt centered">
 					<div class="col-lg-6">
 						
-						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastro" method="post">
+						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastrar" method="post">
 				  			<div class="form-group">
 				   				<span style="font-size: 20px">Nome &nbsp</span>
 				   				<input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome" required>
