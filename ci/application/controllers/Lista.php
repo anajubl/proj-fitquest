@@ -9,6 +9,8 @@ class Lista extends CI_Controller {
         $this->load->view('headerp');
         $this->load->view('table');
 
+/* pegar func dashboard */
+
     }
  
    

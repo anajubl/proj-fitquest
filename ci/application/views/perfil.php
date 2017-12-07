@@ -159,7 +159,7 @@
                                 <div class="author">
                                     <br><br><br><br>
                                      <a href="#">
-                                    <img class="avatar border-gray" src="assets/img/faces/face-3.jpg" alt="..."/>
+                                    <img class="avatar border-gray" src="<?= base_url('assets/img/faces/face-3.jpg') ?>" alt="..."/>  
 
                                       <h4 class="title"> <?= $nome ?> </h4>  <!--NOME AQUI-->
                                     </a>

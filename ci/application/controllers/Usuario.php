@@ -21,9 +21,6 @@ class Usuario extends CI_Controller {
 		//$this->load->view("home");
 	}
 	
-		public function form(){
-		$this->load->view("dashboard");
-	}
 	
 	public function sair(){
 		$this->session->unset_userdata("usuario");
