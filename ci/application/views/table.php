@@ -1,24 +1,23 @@
 
             <ul class="nav">
                 <li>
-                    <a href="dashboard">
+                    <a href="/ci/index.php/painel/dashboard"> 
                         <i class="pe-7s-graph"></i>
                         <p>Painel</p>
                     </a>
                 </li>
-                <li  class="active">
-                    <a href="/ci/index.php/painel/tabela"> <!-- ATUALIZAR -->
+                <li class="active">
+                    <a href="/ci/index.php/lista/table"> 
                         <i class="pe-7s-gym"></i>
                         <p>Minhas Atividades</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/ci/index.php/painel/usuario"> <!-- ATUALIZAR -->
+                    <a href="/ci/index.php/perfil/dash"> 
                         <i class="pe-7s-user"></i>
                         <p>Perfil</p>
                     </a>
                 </li>
-                
             </ul>
     	</div>
     </div>

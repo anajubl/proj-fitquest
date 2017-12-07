@@ -7,18 +7,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="table"> 
+                    <a href="/ci/index.php/lista/table"> 
                         <i class="pe-7s-gym"></i>
                         <p>Minhas Atividades</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user"> 
+                    <a href="/ci/index.php/perfil/dash"> 
                         <i class="pe-7s-user"></i>
                         <p>Perfil</p>
                     </a>
                 </li>
-                
             </ul>
     	</div>
     </div>

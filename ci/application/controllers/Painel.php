@@ -5,15 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Painel extends CI_Controller {
    
    
-    
-    public function table(){
-        
-        $this->load->view('headerp');
-        $this->load->view('table');
-
-    }
-    
-    
  public function dashboard(){
 		if($this->session->userdata("usuario")){
 			$data["nome"] = $this->session->userdata("usuario")["nome"];

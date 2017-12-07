@@ -5,14 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Perfil extends CI_Controller {
    
    
-    public function index(){
-                
-        $this->load->view('headerp');
-        $this->load->view('user');
-    }
-
- 
-    
  public function dash(){
 		if($this->session->userdata("usuario")){
 			$data["nome"] = $this->session->userdata("usuario")["nome"];
@@ -25,7 +17,7 @@ class Perfil extends CI_Controller {
 			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
 
 			$this->load->view("headerp");
-			$this->load->view("user",$data);
+			$this->load->view("perfil",$data);
 		}else{
 			redirect('/login/form','refresh');
 		}
