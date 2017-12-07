@@ -455,6 +455,7 @@
 [05-Dec-2017 14:27:26 UTC] PHP   5. CI_Loader->view() /home/ubuntu/workspace/ci/application/controllers/Usuario.php:16
 [05-Dec-2017 14:27:26 UTC] PHP   6. CI_Loader->_ci_load() /home/ubuntu/workspace/ci/system/core/Loader.php:489
 [05-Dec-2017 14:27:26 UTC] PHP   7. include() /home/ubuntu/workspace/ci/system/core/Loader.php:962
+<<<<<<< HEAD
 [06-Dec-2017 20:01:35 UTC] PHP Fatal error:  Call to undefined method stdClass::ucwords() in /home/ubuntu/workspace/ci/application/models/Usuariodao.php on line 17
 [06-Dec-2017 20:01:35 UTC] PHP Stack trace:
 [06-Dec-2017 20:01:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
@@ -695,3 +696,13 @@
 [07-Dec-2017 02:55:02 UTC] PHP   4. Usuario->dashboard() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [07-Dec-2017 02:55:02 UTC] PHP   5. CI_Loader->view() /home/ubuntu/workspace/ci/application/controllers/Usuario.php:16
 [07-Dec-2017 02:55:02 UTC] PHP   6. CI_Loader->_ci_load() /home/ubuntu/workspace/ci/system/core/Loader.php:489
+=======
+[07-Dec-2017 04:51:05 UTC] PHP Warning:  Unterminated comment starting line 12 in /home/ubuntu/workspace/ci/application/controllers/Lista.php on line 12
+[07-Dec-2017 04:51:05 UTC] PHP Stack trace:
+[07-Dec-2017 04:51:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[07-Dec-2017 04:51:05 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[07-Dec-2017 04:51:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/ci/application/controllers/Lista.php on line 20
+[07-Dec-2017 04:51:05 UTC] PHP Stack trace:
+[07-Dec-2017 04:51:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[07-Dec-2017 04:51:05 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+>>>>>>> c336a9200d54b262e3b51110cb1a7a0c76d70a30

@@ -3,23 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usuario extends CI_Controller {
 	
-	public function dashboard(){
-		if($this->session->userdata("usuario")){
-			$data["id"] = $this->session->userdata("usuario")["id"];
-			$data["nome"] = $this->session->userdata("usuario")["nome"];
-			$data["foco"] = $this->session->userdata("usuario")["foco"];
-			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
-			$data["cd_foco"] = $this->session->userdata("usuario")["cd_foco"];
-			$data["cd_nivel"] = $this->session->userdata("usuario")["cd_nivel"];
-			
-			$this->load->model('atividadedao');
-			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
-			$this->load->view("painel",$data);
-		}else{
-			redirect('/login/form','refresh');
-		}
-	}
-
 	public function cadastro(){
 		$nome = $this->input->post("nome");
 		$email = $this->input->post("email");
@@ -37,14 +20,12 @@ class Usuario extends CI_Controller {
 		//$this->load->view("home");
 	}
 	
-	
-	
 	public function sair(){
 		$this->session->unset_userdata("usuario");
 		redirect('/home/form','refresh');
 	}
 	
-	public function auth(){
+	   	public function auth(){
 		$email = $this->input->post("email");
 		$senha = $this->input->post("senha");
 		require_once APPPATH."models/usuario.php";
@@ -62,12 +43,13 @@ class Usuario extends CI_Controller {
 			$this->session->set_userdata("usuario",$user);
 			
 			
-			redirect('usuario/dashboard','refresh');			
+			redirect('/painel/dashboard','refresh');			
 		}else{
 	
 		redirect('/home','refresh');
 		}
 	}
+}
 	
 	public function verAtividade(){
 		$id = $_POST["id"];

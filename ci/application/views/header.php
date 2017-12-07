@@ -11,13 +11,13 @@
 	    <title>FitQuest</title>
 	
 	    <!-- Bootstrap core CSS -->
-	    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	    <link href="<?= base_url('assets/css/bootstrap.css') ?>" rel="stylesheet"> 
 	
 	    <!-- Custom styles for this template -->
-	    <link href="assets/css/main.css" rel="stylesheet">
+	    <link href="<?= base_url('assets/css/main.css') ?>" rel="stylesheet"> 
 	
 	    <!-- Fonts from Google Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+		<link href="<?= base_url('http://fonts.googleapis.com/css?family=Lato:300,400,900') ?>" rel='stylesheet' type='text/css'> 
 	    
 	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!--[if lt IE 9]>
