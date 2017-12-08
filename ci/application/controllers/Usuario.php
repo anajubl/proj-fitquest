@@ -39,6 +39,7 @@ class Usuario extends CI_Controller {
 				"nivel" => $usuario->getNivelNM(),
 				"cd_foco" => $usuario->getFoco(),
 				"cd_nivel" => $usuario->getNivel(),
+				"ds_email" => $usuario->getEmail()
 			];
 			$this->session->set_userdata("usuario",$user);
 			
@@ -83,6 +84,27 @@ class Usuario extends CI_Controller {
 			echo "Não houve retorno do banco para $id";	
 		}
 	}
+
+		public function AlteraPerfil(){
+		$email = $this->input->post("email");
+		$novoemail = $this->input->post("novoemail");
+		$senha = $this->input->post("senha");
+		require_once APPPATH."models/usuario.php";
+		$this->load->model('usuariodao');
+		$usr = $this->usuariodao;
+		$usuario = $usr->AtualizaEmail($email,$senha,$novoemail);
+		if(isset($usuario)){
+			$this->session->unset_userdata("usuario");
+			$this->db->update('nm_email_usuario');
+			
+			
+			
+		}
+}
+
+	
+	
+	
 }
 
 	

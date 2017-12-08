@@ -44,6 +44,26 @@
             }
     
         }
+        
+        
+          public function AtualizaEmail($email,$senha,$novoemail){
+        		
+        		$this->db->where('nm_email_usuario',$email);
+        		$this->db->where('nm_senha_usuario',$senha);
+				$usr = $this->db->get('usuario');
+				require_once APPPATH."models/usuario.php";
+				if ($usr->num_rows()>0){
+				  $this->db->where ('nm_email_usuario',$email);
+				  $this->db->where ('nm_senha_usuario',$senha);
+				  $this->db->set('nm_email_usuario',$novoemail);
+				  $this->db->update ('usuario');
+				  redirect('usuario/auth/','refresh');
+		       }else{
+		         return null;
+		            }
+		        	
+        	
+        }
 
     }
 ?>

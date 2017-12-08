@@ -19,8 +19,8 @@
                     </a>
                 </li>
             </ul>
-    	</div>
-    </div>
+    	</div><!--SIDEBAR-WRAPER-->
+    </div><!--SIDEBAR-->
 
 
     <div class="main-panel">
@@ -46,9 +46,11 @@
                         </li>
 						<li class="separator hidden-lg hidden-md"></li>
                     </ul>
-                </div>
-            </div>
+                </div><!--collapse navbar-collapse-->
+            </div><!--container fluid-->
         </nav>
+        
+        
         <!-- fim do header VARIAVEL-->
 
         <div class="content">
@@ -57,96 +59,53 @@
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Editar Perfil</h4>
+                                <h4 class="title">Alterar Email</h4>
                             </div>
                             <div class="content">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Company (disabled)</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="Creative Code Inc.">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Username</label>
-                                                <input type="text" class="form-control" placeholder="Username" value="michael23">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" placeholder="Email">
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                <form action="/ci/index.php/usuario/AlteraPerfil" method="post">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" class="form-control" placeholder="Company" value="Mike">
+                                                <label>Email Anterior</label>
+                                                <input type="text" class="form-control" placeholder="Email" name="email">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>Last Name</label>
-                                                <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
+                                                <label>Novo Email</label>
+                                                <input type="text" class="form-control" placeholder="Email" name="novoemail">
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div><!--row-->
 
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>City</label>
-                                                <input type="text" class="form-control" placeholder="City" value="Mike">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Country</label>
-                                                <input type="text" class="form-control" placeholder="Country" value="Andrew">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Postal Code</label>
-                                                <input type="number" class="form-control" placeholder="ZIP Code">
+                                                <label>Senha</label>
+                                                <input type="password" class="form-control" placeholder="Senha" name="senha">
                                             </div>
                                         </div>
                                     </div>
+
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>About Me</label>
-                                                <textarea rows="5" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                                <label>Confirme a senha</label>
+                                                <input type="password" class="form-control" placeholder="Senha" name="Confirmar senha">
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                        <br>
+                                        <div class="col-md-4">
+                                      <button type="submit" class="btn btn-info btn-fill">Alterar email</button>
+                                          </div><!--col-md-4-->
                                     <div class="clearfix"></div>
                                 </form>
+                                    </div>
                             </div>
-                        </div>
                     </div>
-                    
-                   
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
+                  </div><!--col md-8-->
+                  
                     <!--PERFIL CARD-->
                     <div class="col-md-4">
                         <div class="card card-user">
@@ -161,14 +120,17 @@
                                      <a href="#">
                                     <img class="avatar border-gray" src="<?= base_url('assets/img/faces/face-3.jpg') ?>" alt="..."/>  
 
-                                      <h4 class="title"> <?= $nome ?> </h4>  <!--NOME AQUI-->
+                                      <h4 class="title"> <?= $nome ?> </h4>
                                     </a>
                                     
-                                    <p style="font-weight: bold">Foco:  <span><?= $foco ?></span> </p> <!--FOCO AQUI-->
+                                    <p style="font-weight: bold">Foco:  <span><?= $foco ?></span> </p> 
                                     
-                                    <p style="font-weight: bold">Nível: <span><?= $nivel ?></span> </p> <!--NIVEL AQUI-->
+                                    <p style="font-weight: bold">Nível: <span><?= $nivel ?></span> </p>
+                                    
+                                    <p style="font-weight: bold">Email:  <span><?= $ds_email ?></span> </p>
                                     
                                 </div>
+                                
                                 <p class="description text-center"> "Procurando uma vida <br>
                                                     mais saudável" <br>
                                 </p>
@@ -176,6 +138,69 @@
                             <hr>
                         </div>
                     </div><!-- FIM md-4 PERFIL CARD-->
+                 </div><!--row-->
+                </div>
+		
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Excluir Conta</h4>
+                            </div>
+                            <div class="content">
+                                <form action="/ci/index.php/usuario/DeletaUsuario" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control" placeholder="Email" name="email">
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Senha</label>
+                                                <input type="password" class="form-control" placeholder="Senha" name="senha">
+                                            </div>
+                                        </div>
+                                    </div><!--row-->
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Confirme a senha</label>
+                                                <input type="password" class="form-control" placeholder="Senha" name="Confirmar senha">
+                                            </div>
+                                        </div>
+                                        
+                                    <div class="col-md-4">
+                                      <button type="submit" class="btn btn-danger btn-fill pull-right">Excluir Conta</button>
+                                    </div><!--col-md-4-->
+                                    <div class="clearfix">
+                                    </div>
+                                    </div><!--row-->
+                                </div> <!--row-->   
+                                </form>
+                            </div><!--row escluir conta 2 -->
+                        </div><!--content-->
+                    </div><!--CARD-->
+                </div><!--col-md-8-->
+		</div><!--row escluir conta 1 -->
+</div><!--contaeir fluid-->
+</div><!--content-->
+
+</div><!--CONTENT-->
+		
+	
+
+</div><!--MAIN PAINEL-->
+
+
+
+</body>
+
        <!--INICIO DO FOOTER-->
         <footer class="footer">
             <div class="container-fluid">
@@ -187,11 +212,6 @@
             </div>
         </footer>
 
-    </div><!-- INICIO DA DIV??-->
-</div><!-- INICIO DA DIV??-->
-
-
-</body>
 
     <!--   Core JS Files   -->
     <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
