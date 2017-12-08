@@ -32,13 +32,16 @@
             return $this->dsexe;
         }
         
-        public function getCdfoco(){
-            return $this->cdfoco;
+        public function getQtseries(){
+            return $this->qtseries;
         }
         
-       
-       public function getCdfoco(){
-            return $this->cdfoco;
+        public function getQtreps(){
+            return $this->qtreps;
+        }
+        
+        public function getFeito(){
+            return $this->feito;
         }
         
        
@@ -49,11 +52,13 @@
         public function toArray(){
             $aux = array();
             
-            $aux["cd_atividade"] = $this->cdativ;
-            $aux["nm_atividade"] = $this->nomeativ;
-            $aux["ds_atividade"] = $this->dsativ;
-            $aux["cd_nivel"] = $this->cdnivel;
-            $aux["cd_foco"] = $this->cdfoco;
+            $aux["cd_id_usuario"] = $this->idusr;
+            $aux["cd_atividade"] = $this->idatividade;
+            $aux["ds_exercicio"] = $this->dsexe;
+            $aux["qt_series"] = isset($this->qtseries) ? $this->qtseries : 0;
+            $aux["qt_repeticoes"] = isset($this->qtreps) ? $this->qtreps : 0 ;
+            $aux["ic_feito"] = $this->feito;
+
 
             return $aux;
         }

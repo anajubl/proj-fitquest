@@ -25,7 +25,7 @@ class Usuario extends CI_Controller {
 		redirect('/home/form','refresh');
 	}
 	
-	   	public function auth(){
+	public function auth(){
 		$email = $this->input->post("email");
 		$senha = $this->input->post("senha");
 		require_once APPPATH."models/usuario.php";
@@ -38,7 +38,7 @@ class Usuario extends CI_Controller {
 				"foco" => $usuario->getFocoNM(),
 				"nivel" => $usuario->getNivelNM(),
 				"cd_foco" => $usuario->getFoco(),
-				"cd_nivel" => $usuario->getNivel()
+				"cd_nivel" => $usuario->getNivel(),
 			];
 			$this->session->set_userdata("usuario",$user);
 			
@@ -49,7 +49,18 @@ class Usuario extends CI_Controller {
 		redirect('/home','refresh');
 		}
 	}
-
+	
+	public function getID(){
+		$email = $_POST["email"];
+		require_once APPPATH."models/usuario.php";
+		$this->load->model('usuariodao');
+		$usrdao = $this->usuariodao;
+		$id = $usrdao->getID($email);
+		if(isset($id)){
+			echo json_encode($id);
+		}
+	}
+		
 
 	
 	public function verAtividade(){

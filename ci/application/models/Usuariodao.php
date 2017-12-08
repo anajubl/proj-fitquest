@@ -27,6 +27,21 @@
             }else{
                 return null;
             }
+        }
+        
+        public function getID($email){
+            $this->db->select('usuario.cd_id_usuario');
+            $this->db->where('usuario.nm_email_usuario',$email);
+		    $usr = $this->db->get('usuario');
+		    require_once APPPATH."models/usuario.php";
+		    if ($usr->num_rows()>0){
+		        $usuario = $usr->result()[0];
+		        $id=$usuario->cd_id_usuario;
+
+		        return $id;
+            }else{
+                return null;
+            }
     
         }
 

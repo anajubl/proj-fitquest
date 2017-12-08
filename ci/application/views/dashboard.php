@@ -99,13 +99,16 @@
                                              <?php foreach($vetor as $atividade){ ?>
                                             <tr>
                                                 <td>
-													<div class="checkbox">
-						  							  	<input id="checkbox1" type="checkbox">
-						  							  	<label for="checkbox1"></label>
-					  						  		</div>
+                                                    <?php echo $atividade->getNomeativ() ?>
                                                 </td>
-                                                <td><?php echo $atividade->getNomeativ() ?></td>
-                                               
+                                                <td>
+                                                    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
+							    	                    <input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
+							                        </label>
+							                     </td>
+							                     <td>
+							                         
+							                     </td>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
@@ -115,6 +118,39 @@
                             </form>
                         </div>
                     </div><!--col-md-8-->
+                    <div id="exampleModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:99999"><!--modal check atividade-->
+                            <div class="modal-dialog" style="z-index:99999";>
+                            <div class="modal-content"> 
+						    	<form>
+                                	<div class="modal-header">
+                                    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    	<h4 class="modal-title" id="exampleModalLabel">Confirmação de Atividade Realizada</h4>
+                                	</div>
+                                	<div class="modal-body">
+                                	    <h2 id="titulo"></h2>
+                            		
+                                		<p id="ds"></p>
+                                		
+    	                                <p>Você já realizou essa atividade?</p>
+    		                            <label>    
+    		                                <input type="radio" id="sim" name="fez" value="sim" checked>Sim</input>
+    		                            </label>
+    		                            <label>
+    		                                <input type="radio" id="nao" name="fez" value="não">Não</input>
+    	                                </label>
+    	                                <label>
+    		                                <p class="text-warning"><small>Como foi?</small></p>
+    		                                <input type="textarea" name="descricao" id="descricao"/></input>
+    	                            	</label>
+    	                            </div>
+    	                            <div class="modal-footer">
+    	                                <button type="button" class="btn btn-default" data-dismiss="modal" id="enviar_ok">Ok</button>	
+    	                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                	</div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                
 <!--INICIO DO FOOTER-->
         <footer class="footer">
@@ -151,20 +187,70 @@
     	<script type="text/javascript">
     	
         	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'pe-7s-gym',
-            	message: "Bem-vindo ao seu perfil no <b>FitQuest</b> navegue pelo menu lateral e veja suas sugestões de atividades."
-
-            },{
-                type: 'info',
-                timer: 4000
+            	demo.initChartist();
+            	$.notify({
+                	icon: 'pe-7s-gym',
+                	message: "Bem-vindo ao seu perfil no <b>FitQuest</b> navegue pelo menu lateral e veja suas sugestões de atividades."
+                },{
+                    type: 'info',
+                    timer: 4000
+                });
+        	});
+        	
+        	
+        	var atividades = [];
+    		
+    		$(".botao").click(function(){
+		    	var id = $(this)[0].id;
+			    const xhr = new XMLHttpRequest();
+			    xhr.open("POST", "verAtividade");
+			    xhr.onreadystatechange = function() {
+			        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+			            var resp = JSON.parse(xhr.responseText);
+			            atividades[0]=resp;
+			            alert(atividades);
+			        	document.getElementById("ds").innerHTML=resp.ds;
+			            document.getElementById("titulo").innerHTML=resp.nome;
+			        }
+			    }
+			    var fd = new FormData();
+			    fd.append('id', id);
+			    xhr.send(fd);
+    		});
+    		
+    		$("#enviar_ok").click(function(){
+    			
+    			var cd_usuario = "";
+    			var cd_atividade = atividades[0].id;
+    			var ds_exercicio = "";
+    			var qt_series = "";
+    			var qt_repeticoes = "";
+    			var ic_feito = "";
+    			
+    			alert(cd_atividade); return "";
+    			
+			    const xhr = new XMLHttpRequest();
+			    xhr.open("POST", "verAtividade");
+			    xhr.onreadystatechange = function() {
+			        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+			            var resp = JSON.parse(xhr.responseText);
+			            
+			        	document.getElementById("ds").innerHTML=resp.ds;
+			            document.getElementById("titulo").innerHTML=resp.nome;
+			        }
+			    }
+			    var fd = new FormData();
+			    fd.append('id', id);
+			    xhr.send(fd);
+    		});
+    		
+        	$('#exampleModal').on('show.bs.modal', function (event) {
+              var label = $(event.relatedTarget) 
+              var recipient = label.data('whatever')
+              var modal = $(this)
+              modal.find('.modal-title').text('Confirmação de ' + recipient)
             });
 
-    	});
-    	</script>
-
-
+        	
+        </script>
 </html>

@@ -11,6 +11,7 @@ class Lista extends CI_Controller {
 			$data["nivel"] = $this->session->userdata("usuario")["nivel"];
 			$data["cd_foco"] = $this->session->userdata("usuario")["cd_foco"];
 			$data["cd_nivel"] = $this->session->userdata("usuario")["cd_nivel"];
+			$data["ds_email"] = $this->session->userdata("usuario")["ds_email"];
 			
 			$this->load->model('atividadedao');
 			$data["vetor"] = $this->atividadedao->getAtiv($data["cd_foco"], $data["cd_nivel"]);
