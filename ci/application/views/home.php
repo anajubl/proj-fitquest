@@ -22,12 +22,12 @@
 						</form>					
 					</div><!-- /col-lg-6 -->
 					<div class="col-lg-6">
-						<!-- ADICIONAR WRAPER PARA SLIDES AQUI -->
 						<img class="img-responsive" src="assets/img/fq1.png" alt="">
 					</div><!-- /col-lg-6 -->
 				</div><!-- /row -->
 			</div><!-- /container -->
-		</div><!-- /headerwrap --><!---- FIM DA AREA DE LOGIN ---->
+		</div><!-- /headerwrap -->
+		<!---- FIM DA AREA DE LOGIN ---->
 	
 		<!-- AREA COMO FUNCIONA -->
 		<div class="container" id="explic">
@@ -41,52 +41,40 @@
 			<div class="row mt centered">
 				<div class="col-lg-4">
 					<img src="assets/img/ser01.png" width="180" alt="">
-					<h4>1 - Crie seu avatar</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				</div><!--/col-lg-4 -->
-
-				<div class="col-lg-4">
-					<img src="assets/img/ser03.png" width="180" alt="">
-					<h4>2 - Adicione suas tarefas</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-
+					<h4>1 - Objetivo</h4>
+					<p>No cadastro, você informa qual é seu <strong>objetivo</strong> com a prática de exercícios:
+					força, emagrecimento ou condicionamento físico.</p>
 				</div><!--/col-lg-4 -->
 
 				<div class="col-lg-4">
 					<img src="assets/img/ser02.png" width="180" alt="">
-					<h4>3 - Ganhe pontos ao cumprir as tarefas e troque por recompensas</h4>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+					<h4>2 - Exercícios de acordo com objetivo</h4>
+					<p> Você terá sugestões de <strong>exercícios</strong> de acordo com o seu objetivo e seu nível.</p>
+				</div><!--/col-lg-4 -->
+
+				<div class="col-lg-4">
+					<img src="assets/img/ser03.png" width="180" alt="">
+					<h4>3 - Dificuldade dos exercícios aumenta gradativamente</h4>
+					<p>Os exercícios propostos vão <strong>aumentando</strong> de dificuldade conforme você vai concluindo.</p>
 				</div><!--/col-lg-4 -->
 			</div><!-- /row -->
-		</div><!-- /container --><!---- FIM DA AREA COMO FUNCIONA ---->
-	
-		<!-- APAGAR DIV ABAIXO ---------------------------------------------------------->
-		<div class="container">
-			<hr>
-			<div class="row centered">
-				<div class="col-lg-6 col-lg-offset-3">
-					<form class="form-inline" action="" role="form">
-				  		<div class="form-group">
-				    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
-				  		</div>
-				  		<button type="submit" class="btn btn-warning btn-lg">Eu Quero!</button>
-					</form>					
-				</div>
-				<div class="col-lg-3"></div>
-			</div><!-- /row -->
-			<hr>
 		</div><!-- /container -->
+		<!---- FIM DA AREA COMO FUNCIONA ---->
+	
+		<hr>
 	
 		<!---- AREA QUEM SOMOS ---->
 		<div class="container" id="sobre">
 			<div class="row mt centered">
 				<div class="col-lg-6 col-lg-offset-3">
 					<h1>Conheça o FitQuest!</h1>
-					<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</h3>
+					<h3>Um novo jeito de praticar exercícios.</h3> 
+					<h4>Simples e divertido.</h4>
+					<p>O FitQuest é para você que sente muita dificuldade em manter uma rotina de exercícios e não sabe nem por onde começar.</p>
 				</div>
 			</div><!-- /row -->
 	
-			<!-- CAROUSEL -->
+			<!-- CAROUSEL  QUEM SOMOS-->
 			<div class="row mt centered">
 				<div class="col-lg-6 col-lg-offset-3">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -112,23 +100,9 @@
 					</div><!-- /col-lg-8 -->
 				</div><!-- /row -->
 			</div><!--/container -->
-
-			<div class="container">
-				<hr>
-				<div class="row centered">
-					<div class="col-lg-6 col-lg-offset-3">
-						<form class="form-inline" role="form">
-					  		<div class="form-group">
-					    		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu e-mail">
-					  		</div>
-					  		<button type="submit" class="btn btn-warning btn-lg">Quero participar!</button>
-						</form>					
-					</div>
-					<div class="col-lg-3"></div>
-				</div><!-- /row -->
-				<hr>
-			</div><!-- /container -->
 			<!---- FIM DA AREA QUEM SOMOS ---->
+			
+			<hr>
 
 			<!-- CADASTRE-SE -->
 			<div class="container" id="cadastro">
@@ -166,16 +140,18 @@
 				
 				
 					<div class="col-lg-6">
-						Sexo
+						<span style="font-size: 20px">Sexo</span>
 						<fieldset style="" id="genero" required>
 				  			<input type="radio" name="genero" value="true" id="m" checked> Masculino<br>
   							<input type="radio" name="genero" value="false" id="f"> Feminino<br>
 						</fieldset>
 				   		<br>
-						Objetivo
+						<span style="font-size: 20px">Objetivo/Foco</span>
 						<fieldset class="centered" id="foco" required>
 				       		<input type="radio" name="foco" value="1" id="forca">Força
+				       		<br>
 				       		<input type="radio" name="foco" value="2" id="emagrecimento">Emagrecimento
+				       		<br>
 				       		<input type="radio" name="foco" value="3" id="condicionamento">Condicionamento
 				   		</fieldset>
 				   		<br>
@@ -189,36 +165,6 @@
 				</div>
 			</div>
 		</form><!---- FIM DA AREA DE CADASTRO ---->
-		
-		<!-- FORM DE CONTATO -->
-		<div class="container" id="contato">
-			<hr>
-			<div class="row centered">
-				<div class="col-lg-6 col-lg-offset-3">
-					<h1>Fale Conosco</h1>
-					<form class="form-inline" role="form" action="" method="post">
-						<div class="form-group">
-							Nome &nbsp
-							<input type="text" class="form-control" name="nome" id="nome"  placeholder="Digite seu nome" required>
-							<br>
-							<br>
-							Email &nbsp<input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required>
-							<br>
-							<br>
-							<div class="dropdown">
-								<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Selecione o assunto<span class="caret"></span></button>
-								<ul class="dropdown-menu">
-							    	<li><a href="#">Cadastro</a></li>
-						    		<li><a href="#">Login</a></li>
-						    		<li><a href="#">Atividades propostas</a></li>
-						    		<li><a href="#">Outros</a></li>
-						  		</ul>
-							</div><!-- /dropdown -->
-							<br>
-							<br>
-						</div><!-- /form-group-->
-						<br>
-					</form>
-				</div>
+	
 	</body>
 </html>
