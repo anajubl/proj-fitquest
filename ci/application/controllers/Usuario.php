@@ -109,19 +109,9 @@ class Usuario extends CI_Controller {
 			$this->load->model('usuariodao');
 			$usr = $this->usuariodao;
 			$usuario = $usr->ExcluirConta($email,$senha);
-			if(isset($usuario)){
-				$this->session->unset_userdata("aluno");
-				$this->db->row_delete($senha);
-			 
-		
-		
-		
-	}
-
-
-
+			
 	
-}
+		}
 
 }
 	

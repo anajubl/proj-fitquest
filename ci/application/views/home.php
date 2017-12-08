@@ -22,7 +22,7 @@
 						</form>					
 					</div><!-- /col-lg-6 -->
 					<div class="col-lg-6">
-						<img class="img-responsive" src="assets/img/fq1.png" alt="">
+						<img class="img-responsive" src="<?= base_url('assets/img/fq1.png') ?>" alt=""> 
 					</div><!-- /col-lg-6 -->
 				</div><!-- /row -->
 			</div><!-- /container -->
@@ -40,20 +40,20 @@
 		
 			<div class="row mt centered">
 				<div class="col-lg-4">
-					<img src="assets/img/ser01.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser01.png') ?>" width="180" alt=""> 
 					<h4>1 - Objetivo</h4>
 					<p>No cadastro, você informa qual é seu <strong>objetivo</strong> com a prática de exercícios:
 					força, emagrecimento ou condicionamento físico.</p>
 				</div><!--/col-lg-4 -->
 
 				<div class="col-lg-4">
-					<img src="assets/img/ser02.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser02.png') ?>" width="180" alt=""> 
 					<h4>2 - Exercícios de acordo com objetivo</h4>
 					<p> Você terá sugestões de <strong>exercícios</strong> de acordo com o seu objetivo e seu nível.</p>
 				</div><!--/col-lg-4 -->
 
 				<div class="col-lg-4">
-					<img src="assets/img/ser03.png" width="180" alt="">
+					<img src="<?= base_url('assets/img/ser03.png') ?>" width="180" alt="">
 					<h4>3 - Dificuldade dos exercícios aumenta gradativamente</h4>
 					<p>Os exercícios propostos vão <strong>aumentando</strong> de dificuldade conforme você vai concluindo.</p>
 				</div><!--/col-lg-4 -->
@@ -88,13 +88,13 @@
 				  		<!-- Wrapper for slides -->
 				  		<div class="carousel-inner">
 				    		<div class="item active">
-				      			<img src="assets/img/p01.png" alt="">
+				      			<img src="<?= base_url('assets/img/p01.png') ?>" alt="">
 				    		</div>
 				    		<div class="item">
-				      			<img src="assets/img/p02.png" alt="">
+				      			<img src="<?= base_url('assets/img/p02.png') ?>" alt="">
 				    		</div>
 				    		<div class="item">
-				      			<img src="assets/img/p03.png" alt="">
+				      			<img src="<?= base_url('assets/img/p03.png') ?>" alt="">
 				    		</div>
 						</div>			
 					</div><!-- /col-lg-8 -->
