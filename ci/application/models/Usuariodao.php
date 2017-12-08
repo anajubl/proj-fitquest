@@ -65,5 +65,24 @@
         	
         }
 
-    }
+
+			public function ExcluirConta($email,$senha){
+				$this->db->where('nm_email_usuario',$email);
+	    		$this->db->where('nm_senha_usuario',$senha);
+				$usr = $this->db->get('usuario');
+				require_once APPPATH."models/usuario.php";
+				if ($usr->num_rows()>0){
+				
+					$this->db->where ('nm_email_usuario',$email);
+					$this->db->where ('nm_senha_usuario',$senha);
+			        $this->db->delete('usuario');
+			    
+			        redirect ('home',refresh);
+						
+			
+				}
+
+
+			}
+ }
 ?>

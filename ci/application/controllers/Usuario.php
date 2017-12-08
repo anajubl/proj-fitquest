@@ -86,28 +86,44 @@ class Usuario extends CI_Controller {
 	}
 
 		public function AlteraPerfil(){
-		$email = $this->input->post("email");
-		$novoemail = $this->input->post("novoemail");
-		$senha = $this->input->post("senha");
-		require_once APPPATH."models/usuario.php";
-		$this->load->model('usuariodao');
-		$usr = $this->usuariodao;
-		$usuario = $usr->AtualizaEmail($email,$senha,$novoemail);
-		if(isset($usuario)){
-			$this->session->unset_userdata("usuario");
-			$this->db->update('nm_email_usuario');
-			
+			$email = $this->input->post("email");
+			$novoemail = $this->input->post("novoemail");
+			$senha = $this->input->post("senha");
+			require_once APPPATH."models/usuario.php";
+			$this->load->model('usuariodao');
+			$usr = $this->usuariodao;
+			$usuario = $usr->AtualizaEmail($email,$senha,$novoemail);
+			if(isset($usuario)){
+				$this->session->unset_userdata("usuario");
+				$this->db->update('nm_email_usuario');
+				
 			
 			
 		}
 }
 
-	
-	
+		public function DeletaUsuario(){
+			$email = $this->input->post("email");
+			$senha = $this->input->post("senha");
+			require_once APPPATH."models/usuario.php";
+			$this->load->model('usuariodao');
+			$usr = $this->usuariodao;
+			$usuario = $usr->ExcluirConta($email,$senha);
+			if(isset($usuario)){
+				$this->session->unset_userdata("aluno");
+				$this->db->row_delete($senha);
+			 
+		
+		
+		
+	}
+
+
+
 	
 }
 
-	
+}
 	
 	
 	

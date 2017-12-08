@@ -741,3 +741,9 @@
 [08-Dec-2017 05:32:44 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
 [08-Dec-2017 05:32:44 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [08-Dec-2017 05:32:44 UTC] PHP   4. Exercicios->InsereExercicios() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[08-Dec-2017 12:52:09 UTC] PHP Fatal error:  Call to undefined method UsuarioDAO::ExcluirConta() in /home/ubuntu/workspace/ci/application/controllers/Usuario.php on line 111
+[08-Dec-2017 12:52:09 UTC] PHP Stack trace:
+[08-Dec-2017 12:52:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[08-Dec-2017 12:52:09 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[08-Dec-2017 12:52:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[08-Dec-2017 12:52:09 UTC] PHP   4. Usuario->DeletaUsuario() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
