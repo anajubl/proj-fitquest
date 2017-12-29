@@ -74,7 +74,7 @@
 							<br> aqui <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 						<br>
-						<h3>Fça parte do FitQuest.</h3>
+						<h3>Faça parte do FitQuest.</h3>
 					</div><!-- col-->
 				</div><!-- /row -->
 				<div class="row mt centered">
@@ -82,15 +82,15 @@
 						
 						<form class="form-inline" role="form" action="/ci/index.php/usuario/cadastrar" method="post">
 				  			<div class="form-group">
-				   				<span style="font-size: 20px">Nome &nbsp</span>
+				   				<label>Nome &nbsp</label>
 				   				<input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome" required>
 				    			<br>
 				   				<br>
-				    			<span style="font-size: 20px">Email &nbsp</span>
+				    			<label>Email &nbsp</label>
 				    			<input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required>
 				    			<br>
 				    			<br>
-				    			<span style="font-size: 20px">Senha &nbsp</span>
+				    			<label>Senha &nbsp</label>
 				    			<input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha" required>
 				    			<br>
 				    			<br>					
@@ -101,13 +101,13 @@
 					</div><!-- /col-lg-6 -->
 				
 					<div class="col-lg-6">
-						<span style="font-size: 20px">Sexo</span>
+						<label>Sexo</label>
 						<fieldset style="" id="genero" required>
 				  			<input type="radio" name="genero" value="true" id="m" checked> Masculino<br>
   							<input type="radio" name="genero" value="false" id="f"> Feminino<br>
 						</fieldset>
 				   		<br>
-						<span style="font-size: 20px">Objetivo</span>
+						<label>Objetivo</label>
 						<fieldset class="centered" id="foco" required>
 				       		<input type="radio" name="foco" value="1" id="forca" checked> Força
 				       		<br>
@@ -132,18 +132,24 @@
 			<hr>
 			<div class="row centered">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h1>Fale Conosco</h1>
+					<h1>Fale Conosco <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
+						</h1>
+							<h3>Dúvidas? Sugestões?</h3>
+					<br>
 					<form class="form-inline" role="form" action="" method="post">
 						<div class="form-group">
-							Nome &nbsp
+							<label>Nome &nbsp</label>
 							<input type="text" class="form-control" name="nome" id="nome"  placeholder="Digite seu nome" required>
 							<br>
 							<br>
-							Email &nbsp<input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required>
+							<label>Email &nbsp</label>
+							<input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required>
 							<br>
 							<br>
+							<label>Assunto &nbsp</label>
 							<div class="dropdown">
-								<button class="btn btn-primary dropdown-toggle center-block" type="button" data-toggle="dropdown">Selecione o assunto<span class="caret"></span></button>
+								
+								<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Selecione o assunto<span class="caret"></span></button>
 								<ul class="dropdown-menu">
 							    	<li><a href="#">Cadastro</a></li>
 						    		<li><a href="#">Login</a></li>
@@ -152,6 +158,9 @@
 						  		</ul>
 							</div><!-- /dropdown -->
 							<br>
+							<label>Mensagem </label>
+							<textarea class="form-control" rows="4" name="msg-contato" id="msg"></textarea>
+							
 							<br>
 						</div><!-- /form-group-->
 						<br>
