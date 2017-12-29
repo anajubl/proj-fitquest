@@ -1,6 +1,7 @@
 <?php
     class UsuarioDAO extends CI_Model{
         
+        //cadastro:
         public function getUser($email,$senha){
             //SELECT * FROM Usuario WHERE
             //email = $email AND senha = $senha 
@@ -29,6 +30,7 @@
             }
         }
         
+        //pega usuario pelo id
         public function getID($email){
             $this->db->select('usuario.cd_id_usuario');
             $this->db->where('usuario.nm_email_usuario',$email);

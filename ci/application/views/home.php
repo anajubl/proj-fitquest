@@ -159,7 +159,7 @@
 							</div><!-- /dropdown -->
 							<br>
 							<label>Mensagem </label>
-							<textarea class="form-control" rows="4" name="msg-contato" id="msg"></textarea>
+							<textarea class="form-control" rows="4" name="msg-contato" id="msg-cont"></textarea>
 							
 							<br>
 						</div><!-- /form-group-->
