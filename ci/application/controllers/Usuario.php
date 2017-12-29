@@ -63,7 +63,9 @@ class Usuario extends CI_Controller {
 	}
 		
 
+	//transferir para Lista.php:
 	
+	//ativ que aparece no modal
 	public function verAtividade(){
 		$id = $_POST["id"];
 		require_once APPPATH."models/atividade.php";

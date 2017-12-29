@@ -113,6 +113,8 @@
                                            <tr>
                                                 <td> <?php echo $atividade->getNomeativ() ?></td>
             									<td>
+                		  						  	    <button type="button" class="btn btn-outline-primary btn-sm">Agendar</button>  &nbsp
+
                 		  						  	    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
                 							    	        <input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
                 					        		    </label>

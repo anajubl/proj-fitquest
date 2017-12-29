@@ -1,5 +1,5 @@
 <?php
-    //REPRESENTA A TABELA ALUNO
+    
     require_once APPPATH."models/serializable.php";
     require_once APPPATH."models/nameable.php";
     class AtividadeModel implements Serializablee, Nameable{
@@ -34,12 +34,6 @@
         public function getCdfoco(){
             return $this->cdfoco;
         }
-        
-       
-       
-       
-       
-       
        
        
         public function toArray(){

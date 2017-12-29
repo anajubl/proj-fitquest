@@ -747,3 +747,9 @@
 [08-Dec-2017 12:52:09 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
 [08-Dec-2017 12:52:09 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
 [08-Dec-2017 12:52:09 UTC] PHP   4. Usuario->DeletaUsuario() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[29-Dec-2017 20:25:12 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/ci/vendor/autoload.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/ci/quickstart.php on line 3
+[29-Dec-2017 20:25:13 UTC] PHP Stack trace:
+[29-Dec-2017 20:25:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/quickstart.php:0
+[29-Dec-2017 20:25:13 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/ci/vendor/autoload.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/ci/quickstart.php on line 3
+[29-Dec-2017 20:25:13 UTC] PHP Stack trace:
+[29-Dec-2017 20:25:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/quickstart.php:0

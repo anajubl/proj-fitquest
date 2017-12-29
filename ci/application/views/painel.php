@@ -61,11 +61,7 @@
 							<td class="list-group-item">
 							    <?php echo $atividade->getNomeativ() ?>
 							</td>
-							<td>
-							    <label class="" data-toggle="modal" data-target="#exampleModal" data-whatever=" atividade realizada">
-							    	<input type="button" id="<?php echo $atividade->getCdativ()?>" name="check" class="botao" value="ver  >">
-							    </label>
-							</td>
+							
 							<td>
 		
 							</td>
