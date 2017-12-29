@@ -39,8 +39,9 @@
 	        	</div>
 	        	<div class="navbar-collapse collapse">
 	          		<ul class="nav navbar-nav navbar-right">
+	            		<li><a href="#headerwrap">Login</a></li>
 	            		<li><a href="#explic">Como Funciona</a></li>
-	            		<li><a href="#sobre">Quem Somos</a></li>
+	            		<!--<li><a href="#sobre">Quem Somos</a></li>-->
 						<li><a href="#contato">Contato</a></li>
 						<li><a style="font-weight: bold" href="#cadastro">Cadastre-se</a></li>
 	          		</ul>
