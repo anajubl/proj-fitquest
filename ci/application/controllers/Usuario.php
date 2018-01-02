@@ -46,8 +46,11 @@ class Usuario extends CI_Controller {
 			
 			redirect('/painel/dashboard','refresh');			
 		}else{
-	
-		redirect('/home','refresh');
+		
+		$this->session->set_userdata("errol","Dados de login incorretos. Tente novamente");
+		redirect('/home/fail','refresh');
+		
+		//redirect('/home','refresh');
 		}
 	}
 	
