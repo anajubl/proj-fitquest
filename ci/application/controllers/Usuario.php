@@ -66,7 +66,7 @@ class Usuario extends CI_Controller {
 	}
 		
 
-	//transferir para Lista.php:
+	//transferir func abaixo para Lista.php:
 	
 	//ativ que aparece no modal
 	public function verAtividade(){

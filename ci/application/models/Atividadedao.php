@@ -1,5 +1,6 @@
 <?php
-    class AtividadeDAO extends CI_Model{
+
+class AtividadeDAO extends CI_Model{
         
     //seleciona as atividades de acordo com o nivel e foco do usuario para aparecer no dash
         public function getAtiv($cd_foco_user,$cd_nivel_user){
@@ -28,7 +29,7 @@
     
         }
         
-        
+       //ativ q aparece no modal 
        public function getAtivID($id){
             $this->db->select('atividade.*');
             $this->db->where('cd_atividade',$id);
@@ -48,7 +49,14 @@
                 return null;
             }
         }
-    }
+        
+        //depois, enviar ativ para tabela EXERCICIO
+        //public function setAtivConcluida(){
+            
+        //}
+        
+        
+}
             
       
 ?>
