@@ -35,34 +35,29 @@ class Lista extends CI_Controller {
 		}
 	}
 	
-	//UPDATE ativ: tira da lista minhas ativ e envia para ativ concluidas
+	/*
+	
+	// tira da lista minhas ativ e envia para ativ concluidas
 	public function AtivConcluida(){
 		//pega AtivID, ao clicar no OK
 		
-		// getAtivID
+		// usar getAtivID
 		
-		//verAtividade
-		
-		
-			nova session: ativConc
-			load->view->tableAtivConcl
-		
+		// usar verAtividade
 		if(isset($atividade)){
 			$this->session->unset_userdata("atividade");
-			
+			$this->load->view('tableAtivConcl',$ativconcluida);	
 			
 			//INSERIR ATIV EM EXERC: $this->db->insert('nm_atividade') into table exercicio in "nm_exercicio";
 		
 		
 		}
 		
+	
+		
 	}
 
-		
-		
-		
-		
-	/*
+	BASE PARA ATIV CONCLUIDA:
 	
 		$ativc = $this->input->post("ativc");
 		$novoemail = $this->input->post("novoemail");
@@ -106,12 +101,7 @@ public function verAtividade(){
 	
 	*/
 	
-	
-	
-	
-	
-	
-	
+
 	
 }
 
