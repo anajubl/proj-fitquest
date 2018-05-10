@@ -23,7 +23,14 @@ class Perfil extends CI_Controller {
 		}
 	}
    
-    
+public function desempe(){
+	
+	$this->load->view("meuDesempenho");
+}    
+
+	
+	
+	
 }
 
 ?>

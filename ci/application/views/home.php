@@ -132,7 +132,7 @@
 			<hr>
 			<div class="row centered">
 				<div class="col-lg-6 col-lg-offset-3">
-					<h1>Fale Conosco <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
+					<h1>Fale Conosco<span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
 						</h1>
 							<h3>Dúvidas? Sugestões?</h3>
 					<br>

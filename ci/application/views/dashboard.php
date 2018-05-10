@@ -12,12 +12,19 @@
                         <p>Minhas Atividades</p>
                     </a>
                 </li>
+                 <li>
+                    <a href="/ci/index.php/perfil/desempe"> 
+                        <i class="pe-7s-user"></i>
+                        <p>Meu Desempenho</p>
+                    </a>
+                </li>
                 <li>
                     <a href="/ci/index.php/perfil/dash"> 
                         <i class="pe-7s-user"></i>
                         <p>Perfil</p>
                     </a>
                 </li>
+                
             </ul>
     	</div>
     </div>
@@ -41,7 +48,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="/ci/index.php/logout/">
-                                <p>Sair</p>
+                                <p>Logout</p>
                             </a>
                         </li>
 						<li class="separator hidden-lg hidden-md"></li>
@@ -66,7 +73,7 @@
                                 <div class="author">
                                     <br><br><br><br>
                                      <a href="#">
-                                    <img class="avatar border-gray" src="<?= base_url('assets/img/faces/face-3.jpg') ?>" alt="..."/>  
+                                    <img class="avatar border-gray" src="<?= base_url('assets/img/faces/dybala.png') ?>" alt="..."/>  
 
                                       <h4 class="title"> <?= $nome ?> </h4>  <!--NOME AQUI-->
                                     </a>

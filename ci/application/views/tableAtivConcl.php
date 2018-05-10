@@ -58,6 +58,12 @@
                         </a>
                     </li>
                     <li>
+                        <li>
+                    <a href="/ci/index.php/perfil/dash"> 
+                        <i class="pe-7s-user"></i>
+                        <p>Meu Desempenho</p>
+                    </a>
+                </li>
                         <a href="/ci/index.php/perfil/dash"> 
                             <i class="pe-7s-user"></i>
                             <p>Perfil</p>
