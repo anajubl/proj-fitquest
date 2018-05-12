@@ -25,9 +25,10 @@
 
 
     <!--     Fonts and icons     -->
-    <link href="<?= base_url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') ?>" rel="stylesheet"> 
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> 
+    <link href="<?= base_url('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') ?>" rel="stylesheet" /> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css' /> 
     <link href="<?= base_url('assets/css/pe-icon-7-stroke.css') ?>" rel="stylesheet" />
+
 </head>
 <body>
     
@@ -146,23 +147,20 @@
                             <table class="table">
                                 <tbody>
                                     <tr>
-                                        <td>
-    										<div class="checkbox"> <!-- ENVIA ATIV PARA TABELA ABAIXO OU MARCA ELA COMO CLASS DISABLED -->
-    			  							  	<input id="checkbox1" type="checkbox">
-    			  							  	<label for="checkbox1"></label>
-    		  						  		</div>
-                                        </td>
-                                        <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
+                                       
+    										
+                                        
                                     </tr>
-                                </tbody>
+                                 <?php foreach($array as $exercicio){ ?>
+                                           <tr>
+                                                <td> <?php echo $exercicio->getIdAtividade() ?></td>
+            									<td>
+                		  						  	<input type="checkbox" checked disabled>    
+                		  						  	    
+                                                </td>   
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
                             </table>
                         </div><!--TABLE-FULL-->
                     </div><!--CONTENT-->
@@ -176,7 +174,7 @@
   	<div id="exampleModal" class="modal" style="text-align:center;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><!--modal check atividade-->
         <div class="modal-dialog">
             <div class="modal-content">
-				<form>
+				<form >
                 	<div class="modal-header">
                     	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     	<h4 class="modal-title" id="exampleModalLabel">Confirmação de Atividade Realizada</h4>
@@ -188,7 +186,7 @@
                 		
                         <p>Você já realizou essa atividade?</p>
                         <label>    
-                            <input type="checkbox" id="sim" name="fez" value="sim" checked>Sim</input>
+                            <input type="checkbox" id="sim" name="fez" value="sim" checked >Sim</input>
                         </label>
                         <label>
                             <p class="text-warning"><small>Como foi?</small></p>
@@ -196,12 +194,31 @@
                     	</label>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" id="enviar_ok">Ok</button>	
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="enviar_isso()" id="enviar_ok">Ok</button>	
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                 	</div>
                 </form>
             </div>
         </div>
+        <script type="text/javascript">
+        function enviar_isso(){
+            var email="<?php echo $ds_email ?>";
+
+		    const xhr = new XMLHttpRequest();
+		    xhr.open("POST", "../usuario/getID");
+		    xhr.onreadystatechange = function() {
+		        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
+		            var resp = xhr.responseText;
+		            resp = JSON.parse(resp);
+                    insere(resp.codigo);
+		        }
+		    }
+		    var fd = new FormData();
+		    fd.append('email', email);
+		    xhr.send(fd);
+		}
+        
+        </script>
     </div><!-- FIM modal check atividade-->
     
   <!--INICIO DO FOOTER-->
@@ -219,7 +236,6 @@
 
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> 
     	<script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>     	
-	
 	<script type="text/javascript">
 		
 		var atividades = [];
@@ -241,21 +257,17 @@
 		    xhr.send(fd);
 		});
 		
-		function pegaID(email){
-		    const xhr = new XMLHttpRequest();
-		    xhr.open("POST", "../usuario/getID");
-		    xhr.onreadystatechange = function() {
-		        if (xhr.readyState == XMLHttpRequest.DONE &&  xhr.status == 200) {
-		            var resp = xhr.responseText;
-		            return resp;
-		        }
-		    }
-		    var fd = new FormData();
-		    fd.append('email', email);
-		    xhr.send(fd);
-		}
+
 		
-		$("#enviar_ok").click(function(){
+    	$('#exampleModal').on('show.bs.modal', function (event) {
+          var label = $(event.relatedTarget) 
+          var recipient = label.data('whatever')
+          var modal = $(this)
+          modal.find('.modal-title').text('Confirmação de ' + recipient)
+        });
+    
+    
+     function insere(cd_usuario){
 			
 			var ds_email_usu="<?php echo $ds_email ?>";
 			var cd_atividade = atividades[0].id;
@@ -263,7 +275,7 @@
 			var qt_series = "";
 			var qt_repeticoes = "";
 			var ic = document.getElementById("sim").checked;
-			var cd_usuario = pegaID(ds_email_usu)
+
 		    const xhr = new XMLHttpRequest();
 		    xhr.open("POST", "../exercicios/InsereExercicios");
 		    xhr.onreadystatechange = function() {
@@ -273,22 +285,17 @@
 		        }
 		    }
 		    var fd = new FormData();
-		    fd.append('cd_usuario', cd_usuario);
+		    fd.append('cd_id_usuario', cd_usuario);
 		    fd.append('cd_atividade', cd_atividade);
 		    fd.append('ds_exercicio', ds_exercicio);
 		    fd.append('qt_series', qt_series);
 		    fd.append('qt_repeticoes', qt_repeticoes);
 		    fd.append('ic_feito', ic);
 		    xhr.send(fd);
-		});
-		
-    	$('#exampleModal').on('show.bs.modal', function (event) {
-          var label = $(event.relatedTarget) 
-          var recipient = label.data('whatever')
-          var modal = $(this)
-          modal.find('.modal-title').text('Confirmação de ' + recipient)
-        });
-
+		}
+   
+    
     </script>
+	
 
 </html>

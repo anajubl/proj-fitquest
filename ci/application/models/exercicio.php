@@ -24,10 +24,6 @@
             
         }
         
-        public function getDsativ(){
-            return $this->dsativ;
-        }
-        
         public function getDsexe(){
             return $this->dsexe;
         }

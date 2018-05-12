@@ -60,8 +60,10 @@ class Usuario extends CI_Controller {
 		$this->load->model('usuariodao');
 		$usrdao = $this->usuariodao;
 		$id = $usrdao->getID($email);
+
+
 		if(isset($id)){
-			echo json_encode($id);
+			echo json_encode(array('codigo' => $id));
 		}
 	}
 		

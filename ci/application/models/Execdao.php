@@ -1,15 +1,14 @@
 <?php
 
-class ExercicoDAO extends CI_Model{
+class ExecDAO extends CI_Model{
         
     //seleciona as atividades de acordo com o nivel e foco do usuario para aparecer no dash
         public function getExec($ds_email){
-            require_once APPPATH."models/usuariodao.php";
-            $usrid = $this->usuariodao;
-            $usrid->getId($ds_email);
+            $this->load->model('usuariodao');
+            $usrid = $this->usuariodao->getId($ds_email);
             $this->db->select('exercicio.*');
             $this->db->where('exercicio.cd_id_usuario',$usrid);
-		    $atividades = $this->db->get('exercicio');
+		    $exercicio = $this->db->get('exercicio');
 		    require_once APPPATH."models/exercicio.php";
 		    $objs_exec = array();
 		    

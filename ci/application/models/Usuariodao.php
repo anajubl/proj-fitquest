@@ -39,7 +39,6 @@
 		    if ($usr->num_rows()>0){
 		        $usuario = $usr->result()[0];
 		        $id=$usuario->cd_id_usuario;
-
 		        return $id;
             }else{
                 return null;

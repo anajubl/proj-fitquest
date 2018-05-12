@@ -761,3 +761,51 @@
 [02-Jan-2018 16:52:15 UTC] PHP Stack trace:
 [02-Jan-2018 16:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
 [02-Jan-2018 16:52:15 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 14:59:18 UTC] PHP Parse error:  syntax error, unexpected '$qtrept' (T_VARIABLE) in /home/ubuntu/workspace/ci/application/models/Exerciciodao.php on line 22
+[11-May-2018 14:59:18 UTC] PHP Stack trace:
+[11-May-2018 14:59:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 14:59:18 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 14:59:18 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 14:59:18 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 14:59:18 UTC] PHP   5. CI_Loader->model() /home/ubuntu/workspace/ci/application/controllers/Lista.php:17
+[11-May-2018 15:10:26 UTC] PHP Fatal error:  Call to a member function getExec() on a non-object in /home/ubuntu/workspace/ci/application/controllers/Lista.php on line 21
+[11-May-2018 15:10:26 UTC] PHP Stack trace:
+[11-May-2018 15:10:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:10:26 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:10:26 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:10:26 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:10:58 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/ci/application/models/usuariodao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/ci/application/models/Execdao.php on line 7
+[11-May-2018 15:10:58 UTC] PHP Stack trace:
+[11-May-2018 15:10:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:10:58 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:10:58 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:10:58 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:10:58 UTC] PHP   5. ExecDAO->getExec() /home/ubuntu/workspace/ci/application/controllers/Lista.php:21
+[11-May-2018 15:14:01 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/ci/application/models/usuariodao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/ci/application/models/Execdao.php on line 7
+[11-May-2018 15:14:01 UTC] PHP Stack trace:
+[11-May-2018 15:14:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:14:01 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:14:01 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:01 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:01 UTC] PHP   5. ExecDAO->getExec() /home/ubuntu/workspace/ci/application/controllers/Lista.php:21
+[11-May-2018 15:14:20 UTC] PHP Fatal error:  Call to a member function getId() on a non-object in /home/ubuntu/workspace/ci/application/models/Execdao.php on line 9
+[11-May-2018 15:14:20 UTC] PHP Stack trace:
+[11-May-2018 15:14:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:14:20 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:14:20 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:20 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:20 UTC] PHP   5. ExecDAO->getExec() /home/ubuntu/workspace/ci/application/controllers/Lista.php:21
+[11-May-2018 15:14:42 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/ci/application/models/usuariodao.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/ci/application/models/Execdao.php on line 7
+[11-May-2018 15:14:42 UTC] PHP Stack trace:
+[11-May-2018 15:14:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:14:42 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:14:42 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:42 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:14:42 UTC] PHP   5. ExecDAO->getExec() /home/ubuntu/workspace/ci/application/controllers/Lista.php:21
+[11-May-2018 15:17:46 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/ubuntu/workspace/ci/application/models/Execdao.php on line 16
+[11-May-2018 15:17:46 UTC] PHP Stack trace:
+[11-May-2018 15:17:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/ci/index.php:0
+[11-May-2018 15:17:46 UTC] PHP   2. require_once() /home/ubuntu/workspace/ci/index.php:315
+[11-May-2018 15:17:46 UTC] PHP   3. call_user_func_array:{/home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532}() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:17:46 UTC] PHP   4. Lista->table() /home/ubuntu/workspace/ci/system/core/CodeIgniter.php:532
+[11-May-2018 15:17:46 UTC] PHP   5. ExecDAO->getExec() /home/ubuntu/workspace/ci/application/controllers/Lista.php:21
